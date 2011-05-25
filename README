@@ -1,7 +1,19 @@
 Do NOT use my vimrc before reading this file, then reading through everything
 in the *.vim files here!
 
-To install, just do the following:
+To install, you need
+ * vim (duh)
+ * git
 
+Then /just/ do the following (at this point it's kind of a lot of work):
+
+git submodule init
+git submodule update
+vim -u vundle.vim +BundleInstall +q
+mkdir plugin
+cd plugin
+ln -s /home/yourname/.vim/plugin/DBGp-client/plugin/debugger.vim .
+ln -s /home/yourname/.vim/plugin/DBGp-client/plugin/debugger.py .
 ln -s /home/yourname/.vim/vimrc.vim ~/.vimrc
 ln -s /home/yourname/.vim/gvimrc.vim ~/.gvimrc
+
