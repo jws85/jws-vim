@@ -1,0 +1,7 @@
+Do NOT use my vimrc before reading this file, then reading through everything
+in the *.vim files here!
+
+To install, just do the following:
+
+ln -s /home/yourname/.vim/vimrc.vim ~/.vimrc
+ln -s /home/yourname/.vim/gvimrc.vim ~/.gvimrc
