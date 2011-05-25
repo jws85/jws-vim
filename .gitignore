@@ -2,3 +2,4 @@ bundle/*
 plugin/*
 tags/*
 *.swp
+inttek.vim
