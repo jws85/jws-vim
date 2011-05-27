@@ -21,6 +21,9 @@ Bundle 'gmarik/vundle'
 "-- installed bundles --------------------------------------------------
 " Yes I know I use way too many plugins.
 
+" Scroll through installed colorschemes (I have 100+ of them so this helps)
+Bundle 'ScrollColors'
+
 " Allows plugins to hook into the . repeat command
 Bundle 'repeat.vim'
 
