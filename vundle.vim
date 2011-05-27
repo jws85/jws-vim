@@ -27,6 +27,9 @@ Bundle 'repeat.vim'
 " Allows you to quickly add surrounding characters
 Bundle 'surround.vim'
 
+" Extends the % command to work with if/else/endif constructs, HTML tags...
+Bundle 'matchit.zip'
+
 " Git integration
 Bundle 'tpope/vim-fugitive'
 Bundle 'gitv'
@@ -35,7 +38,7 @@ Bundle 'gitv'
 "Bundle 'L9'
 "Bundle 'FuzzyFinder'
 
-" Fast file- and buffer-finding
+" Fast file- and buffer-finding (does not work well with netrw)
 Bundle 'Command-T'
 
 " Switch between header and source files (e.g. C/C++...)
