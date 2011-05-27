@@ -71,6 +71,7 @@ inoremap <C-x>l <C-x><C-l>
 command! -nargs=+ Calc :py print <args>
 py from math import *
 
+"-- plugins ------------------------------------------------------------
 " gitv
 let g:Gitv_OpenHorizontal = 1
 let g:Gitv_CommitStep = 9001
