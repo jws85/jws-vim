@@ -57,6 +57,10 @@ inoremap <C-x>f <C-x><C-f>
 " omnicompletion: lines
 inoremap <C-x>l <C-x><C-l>
 
+"" Quicklist navigation:  I hate using ex-commands to move through the list.
+map <A-n> :cn<CR>
+map <A-p> :cp<CR>
+
 """ Does some stupid split-moving synchronization.
 """ I was dealing with a nasty non-git-enabled merge, and was forced into
 """ this setup.  It sucks ass, I hope to never use it again.
