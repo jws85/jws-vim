@@ -44,8 +44,10 @@ Bundle 'gitv'
 "Bundle 'L9'
 "Bundle 'FuzzyFinder'
 
-" Fast file- and buffer-finding (does not work well with netrw)
-Bundle 'Command-T'
+"" Fast file- and buffer-finding (file finding is wonky)
+"Bundle 'Command-T'
+
+Bundle 'LustyExplorer'
 
 " Switch between header and source files (e.g. C/C++...)
 Bundle 'a.vim' 

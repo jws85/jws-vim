@@ -72,22 +72,18 @@ command! -nargs=+ Calc :py print <args>
 py from math import *
 
 "-- plugins ------------------------------------------------------------
-" gitv
+"" gitv
 let g:Gitv_OpenHorizontal = 1
 let g:Gitv_CommitStep = 9001
 let g:Gitv_WipeAllOnClose = 1
 
-"" Command-T is better than FuzzyMatcher
-" Current match on bottom
-let g:CommandTMatchWindowReverse = 1
-" Show files in current working directory
-map <Leader>f :CommandT<CR>
-" Show files on entire hard drive and mounted drives (a = all)
-map <Leader>fa :CommandT /<CR>
-" Show files in a directory specified by you (d = directory)
-map <Leader>fd :CommandT<SPACE>
-" Show files in home (h = home)
-map <Leader>fh :CommandT ~<CR>
-" Show all open buffers
-map <Leader>j :CommandTBuffer<CR>
+"" LustyExplorer
+" I've tried Command-T and FuzzyFinder, but LustyExplorer (bad name) is
+" the best 'fast file/buffer finder' I've found for Vim.  It works almost
+" exactly like ido for emacs, which is a Good Thing.
+" The keybinds here are like ones I got used to when using Command-T
+map <Leader>f :LustyFilesystemExplorerFromHere<CR>
+map <Leader>fr :LustyFilesystemExplorer<CR>
+map <Leader>fh :LustyFilesystemExplorer ~<CR>
+map <Leader>j :LustyBufferExplorer<CR>
 
