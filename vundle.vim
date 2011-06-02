@@ -21,6 +21,9 @@ Bundle 'gmarik/vundle'
 "-- installed bundles --------------------------------------------------
 " Yes I know I use way too many plugins.
 
+" Terminal in vim.  Just one more step towards turning Vim into Emacs
+Bundle 'Conque-Shell'
+
 " Scroll through installed colorschemes (I have 100+ of them so this helps)
 Bundle 'ScrollColors'
 
