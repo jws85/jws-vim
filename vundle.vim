@@ -50,7 +50,9 @@ Bundle 'gitv'
 "" Fast file- and buffer-finding (file finding is wonky)
 "Bundle 'Command-T'
 
+"" Fast file- and buffer-finding
 Bundle 'LustyExplorer'
+Bundle 'LustyJuggler'
 
 " Switch between header and source files (e.g. C/C++...)
 Bundle 'a.vim' 

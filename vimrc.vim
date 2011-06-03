@@ -87,7 +87,7 @@ let g:Gitv_OpenHorizontal = 1
 let g:Gitv_CommitStep = 9001
 let g:Gitv_WipeAllOnClose = 1
 
-"" LustyExplorer
+"" LustyExplorer:  Fast file and buffer finder
 " I've tried Command-T and FuzzyFinder, but LustyExplorer (bad name) is
 " the best 'fast file/buffer finder' I've found for Vim.  It works almost
 " exactly like ido for emacs, which is a Good Thing.  Alas, it's a bit
@@ -97,6 +97,9 @@ map <Leader>f :LustyFilesystemExplorerFromHere<CR>
 map <Leader>fr :LustyFilesystemExplorer<CR>
 map <Leader>fh :LustyFilesystemExplorer ~<CR>
 map <Leader>j :LustyBufferExplorer<CR>
+
+"" LustyJuggler:  Another fast buffer finder with a slightly NSFW name
+map <Leader>bj :LustyJuggler<CR>
 
 "" DBGp-client
 " I like the debugger, but it gives me problems by rearranging my windows and
