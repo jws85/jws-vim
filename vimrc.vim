@@ -100,7 +100,7 @@ map <Leader>j :LustyBufferExplorer<CR>
 
 "" DBGp-client
 " I like the debugger, but it gives me problems by rearranging my windows and
-" by spewing garbage tags everywhere.
+" by spewing garbage tabs everywhere.
 " As a result, I like to segregate it in its own Vim session.
 map <Leader>dn :!gvim<space>"+python<space>debugger_run()"<cr>
 
