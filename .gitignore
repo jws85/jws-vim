@@ -1,6 +1,12 @@
 bundle/*
 !bundle/vundle
+
 plugin/*
+
+site/*
+!site/all.vim.sample
+!site/gui.vim.sample
+
 tags/*
+
 *.swp
-inttek.vim

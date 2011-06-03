@@ -1,0 +1,17 @@
+" Set GUI settings that I *WILL* want to change between computers here.
+"
+" Author:  Justin Smith <jwsmith2@gmail.com>
+" Date:    2011-06-03
+
+"-- window positioning -------------------------------------------------
+" It doesn't work right on Ubuntu 11.04, damnit.
+winpos 0 0
+set lines=65 columns=152
+
+" i suppose i'll change the font again when i get bored
+set guifont=Envy\ Code\ R\ 11
+
+"-- window appearance --------------------------------------------------
+" turn on a nice syntax theme.  xoria256 is really nice; as is twilight.
+filetype plugin on
+colorscheme xoria256

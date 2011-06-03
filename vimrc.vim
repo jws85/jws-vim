@@ -12,8 +12,8 @@ source ~/.vim/vundle.vim
 "" Sets a pretty modeline at the bottom.
 source ~/.vim/modeline.vim
 
-"" Company-specific data.  Does not come with my setup.
-source ~/.vim/inttek.vim
+"" Loads site-specific settings for both cli-vim and gvim
+source ~/.vim/site/all.vim
 
 "-- settings -----------------------------------------------------------
 "" No color theme set here:  I find the angry fruit salad default easier to read
