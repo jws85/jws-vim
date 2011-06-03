@@ -49,6 +49,9 @@ map <Leader>d <ESC>:e %:p:h/<CR>
 map <Leader>n :bn<cr>
 map <Leader>p :bp<cr>
 
+"" Move the working directory to the current one
+map <Leader>cd :cd %:p:h<CR>:pwd<CR>
+
 "" Omnicompletion:  These have to be emacs-y because you do them in insert-mode.
 " omnicompletion: words
 inoremap <C-x>o <C-x><C-o>
