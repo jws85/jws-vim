@@ -46,9 +46,11 @@ let mapleader = ","
 "" view current directory
 map <Leader>d <ESC>:e %:p:h/<CR>
 
-"" Switch tabs easier
-map <Leader>n :bn<cr>
-map <Leader>p :bp<cr>
+"" Switch buffers and tabs easier
+map <Leader>bn :bn<cr>
+map <Leader>bp :bp<cr>
+map <Leader>tn :tabn<cr>
+map <Leader>tp :tabp<cr>
 
 "" Move the working directory to the current one
 map <Leader>cd :cd %:p:h<CR>:pwd<CR>
@@ -95,4 +97,10 @@ map <Leader>f :LustyFilesystemExplorerFromHere<CR>
 map <Leader>fr :LustyFilesystemExplorer<CR>
 map <Leader>fh :LustyFilesystemExplorer ~<CR>
 map <Leader>j :LustyBufferExplorer<CR>
+
+"" DBGp-client
+" I like the debugger, but it gives me problems by rearranging my windows and
+" by spewing garbage tags everywhere.
+" As a result, I like to segregate it in its own Vim session.
+map <Leader>dn :!gvim<space>"+python<space>debugger_run()"<cr>
 
