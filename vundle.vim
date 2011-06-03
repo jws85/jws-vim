@@ -2,7 +2,7 @@
 " manager for vim.
 "
 " Author:  Justin Smith <jwsmith2@gmail.com>
-" Date:    2011.05.25
+" Date:    2011-06-03
 
 "-- setup --------------------------------------------------------------
 " This is cribbed from the example Vundle setup file.
@@ -32,6 +32,9 @@ Bundle 'repeat.vim'
 
 " Allows you to quickly add surrounding characters
 Bundle 'surround.vim'
+
+" Increment/decrement dates
+Bundle 'speeddating.vim'
 
 " Extends the % command to work with if/else/endif constructs, HTML tags...
 Bundle 'matchit.zip'

@@ -3,7 +3,7 @@
 "" with needing as much unnecessary shit as possible to write code.  Oh well.
 ""
 "" Author:  Justin Smith <jwsmith2@gmail.com>
-"" Date:    2011.05.25
+"" Date:    2011-06-03
 
 "-- external files -----------------------------------------------------
 "" Go look how many plugins I've got/tried and gasp in horror.
