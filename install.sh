@@ -6,6 +6,8 @@
 
 VIMDIR=$HOME/.vim
 
+# FIXME: Back up any existing ~/.(g)vimrc to ~/.(g)vimrc.bak
+# FIXME: Back up any existing ~/.vim/ to ~/.vim.bak
 # FIXME: Copy entire folder from where it is, to ~/.vim/
 
 # Get the vundle installation in place

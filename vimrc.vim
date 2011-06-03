@@ -55,7 +55,7 @@ map <Leader>tp :tabp<cr>
 "" Move the working directory to the current one
 map <Leader>cd :cd %:p:h<CR>:pwd<CR>
 
-"" Omnicompletion:  These have to be emacs-y because you do them in insert-mode.
+"" Omnicompletion: These have to be emacs-y because you do them in insert-mode.
 " omnicompletion: words
 inoremap <C-x>o <C-x><C-o>
 " omnicompletion: filenames (why C-x C-f?  that's forever going to be 'close text editor' for me!)
@@ -63,15 +63,15 @@ inoremap <C-x>f <C-x><C-f>
 " omnicompletion: lines
 inoremap <C-x>l <C-x><C-l>
 
-"" Quicklist navigation:  I hate using ex-commands to move through the list.
+"" Quickfind: I hate using ex-commands to move through the list.
 map <A-n> :cn<CR>
 map <A-p> :cp<CR>
 
-""" Does some stupid split-moving synchronization.
-"" calculator using Python (example: type ':Calc 2 + 3' and hit enter)
+"" Calculator: Needs Python (example: type ':Calc 2 + 3' and hit enter)
 command! -nargs=+ Calc :py print <args>
 py from math import *
 
+""" Does some stupid split-moving synchronization.
 """ I was dealing with a nasty non-git-enabled merge, and was forced into
 """ this setup.  It sucks ass, I hope to never use it again.
 "" Moves both splits to top
@@ -82,12 +82,14 @@ py from math import *
 "map <C-p> k<C-w><C-w>k<C-w><C-w>
 
 "-- plugins ------------------------------------------------------------
-"" gitv
+" These are all installed with Vundle
+
+"" Gitv: An extension to fugitive that lets you easily view repo history
 let g:Gitv_OpenHorizontal = 1
 let g:Gitv_CommitStep = 9001
 let g:Gitv_WipeAllOnClose = 1
 
-"" LustyExplorer:  Fast file and buffer finder
+"" LustyExplorer: Fast file and buffer finder
 " I've tried Command-T and FuzzyFinder, but LustyExplorer (bad name) is
 " the best 'fast file/buffer finder' I've found for Vim.  It works almost
 " exactly like ido for emacs, which is a Good Thing.  Alas, it's a bit
@@ -98,10 +100,10 @@ map <Leader>fr :LustyFilesystemExplorer<CR>
 map <Leader>fh :LustyFilesystemExplorer ~<CR>
 map <Leader>j :LustyBufferExplorer<CR>
 
-"" LustyJuggler:  Another fast buffer finder with a slightly NSFW name
+"" LustyJuggler: Another fast buffer finder with a slightly NSFW name
 map <Leader>bj :LustyJuggler<CR>
 
-"" DBGp-client
+"" DBGpclient: A PHP debugger that talks to an xdebug session
 " I like the debugger, but it gives me problems by rearranging my windows and
 " by spewing garbage tabs everywhere.
 " As a result, I like to segregate it in its own Vim session.

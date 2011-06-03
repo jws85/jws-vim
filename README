@@ -1,9 +1,12 @@
-Do NOT use my vimrc before reading this file, then reading through everything
-in the *.vim files here!
+I would suggest reading this, then reading the files 'vimrc.vim' and
+'gvimrc.vim' before installing, just so you "know what you're getting."
+I'd also suggest backing up your old .(g)vimrc and .vim/ folder.
 
 To install, you need
  * vim (duh)
- * git
+    - has to be compiled with Python and Ruby support
+    - preferably also compiled with GUI support
+ * git (so Vundle can pull down what it needs)
 
 There is a rough, untested script that purports to do the below things.
 Until I get it working, just do these things (yes it's a pain):
@@ -25,3 +28,10 @@ vimrc.vim or gvimrc.vim, you'll be better served by forking this git project
 unless you make the changes by my blessing.  all.vim.sample is (intentionally)
 blank; gui.vim.sample has some settings for fonts, window positioning, etc
 that I use at work but expect to need to change for individual machines.
+
+I would keep in mind that my vim setup does not reflect the mindset of the
+'vi'-style users.  I was an emacs user for three years, and while I left mostly
+because 1) it tried to do too many things for you and was a pain to turn those
+features off and 2) the keymap is bogus, I still largely agree with its general
+philosophy of avoiding program switching unless absolutely necessary.  As a
+result, my setup is very "extension"-centric and is not minimal at all.
