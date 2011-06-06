@@ -40,7 +40,8 @@ set smartcase  " search is case sensitive iff a capital letter is in the needle
 "" I do NOT miss the chording from emacs and try to avoid it with leader keys,
 "" unless it's an insert-mode mapping (i.e. omnicompletion).
 
-"" Sets the leader to comma instead of backslash
+"" Leader: Sets the leader to comma instead of backslash.
+" I use the leader a lot like emacs uses C-x.
 let mapleader = ","
 
 "" view current directory
@@ -108,4 +109,7 @@ map <Leader>bj :LustyJuggler<CR>
 " by spewing garbage tabs everywhere.
 " As a result, I like to segregate it in its own Vim session.
 map <Leader>dn :!gvim<space>"+python<space>debugger_run()"<cr>
+
+"" Bufkill: Wipe out buffers without rearranging splits
+map <Leader>k :BW<CR>
 
