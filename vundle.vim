@@ -88,6 +88,9 @@ Bundle 'The-NERD-Commenter'
 " :BW is like good ol' C-x k from emacs.
 Bundle 'bufkill.vim'
 
+" Automatically updates ctags files on save
+Bundle 'AutoTag'
+
 "" local-vimrc.vim (doesn't get along with fugitive)
 "Bundle 'lh-vim-lib'
 "Bundle 'local_vimrc.vim'
