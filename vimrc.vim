@@ -72,16 +72,6 @@ map <A-p> :cp<CR>
 command! -nargs=+ Calc :py print <args>
 py from math import *
 
-""" Does some stupid split-moving synchronization.
-""" I was dealing with a nasty non-git-enabled merge, and was forced into
-""" this setup.  It sucks ass, I hope to never use it again.
-"" Moves both splits to top
-"map <F12> gg<C-w><C-w>gg<C-w><C-w>
-"" Moves both splits down
-"map <C-n> j<C-w><C-w>j<C-w><C-w>
-"" Moves both splits up
-"map <C-p> k<C-w><C-w>k<C-w><C-w>
-
 "-- plugins ------------------------------------------------------------
 " These are all installed with Vundle
 
