@@ -27,6 +27,9 @@ Bundle 'Conque-Shell'
 " Scroll through installed colorschemes (I have 100+ of them so this helps)
 Bundle 'ScrollColors'
 
+" Display ANSI escape codes as colors, etc, not as mojibake
+Bundle 'AnsiEsc.vim'
+
 " Allows plugins to hook into the . repeat command
 Bundle 'repeat.vim'
 
