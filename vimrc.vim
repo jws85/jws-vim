@@ -93,6 +93,7 @@ map <Leader>j :LustyBufferExplorer<CR>
 
 "" LustyJuggler: Another fast buffer finder with a slightly NSFW name
 map <Leader>bj :LustyJuggler<CR>
+let g:LustyJugglerShowKeys = 'a'
 
 "" DBGpclient: A PHP debugger that talks to an xdebug session
 " I like the debugger, but it gives me problems by rearranging my windows and
