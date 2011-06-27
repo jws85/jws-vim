@@ -58,7 +58,7 @@ map <Leader>cd :cd %:p:h<CR>:pwd<CR>
 
 "" Omnicompletion: These have to be emacs-y because you do them in insert-mode.
 " omnicompletion: words
-inoremap <C-x>o <C-x><C-o>
+inoremap <C-x>w <C-x><C-o>
 " omnicompletion: filenames (why C-x C-f?  that's forever going to be 'close text editor' for me!)
 inoremap <C-x>f <C-x><C-f>
 " omnicompletion: lines
