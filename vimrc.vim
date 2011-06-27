@@ -104,3 +104,11 @@ map <Leader>dn :!gvim<space>"+python<space>debugger_run()"<cr>
 "" Bufkill: Wipe out buffers without rearranging splits
 map <Leader>k :BW<CR>
 
+"" SuperTab: Autocompletion on Tab
+let g:SuperTabDefaultCompletionType = "context"
+
+"" SnipMate: Snippets manager
+" I don't use it as much so I'd rather have the trigger key away
+" from the SuperTab one
+let g:snips_trigger_key='<C-CR>'
+

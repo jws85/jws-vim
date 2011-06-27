@@ -46,13 +46,6 @@ Bundle 'matchit.zip'
 Bundle 'tpope/vim-fugitive'
 Bundle 'gitv'
 
-"" Fast file- and buffer-finding (not as good as Command-T)
-"Bundle 'L9'
-"Bundle 'FuzzyFinder'
-
-"" Fast file- and buffer-finding (file finding is wonky)
-"Bundle 'Command-T'
-
 "" Fast file- and buffer-finding
 Bundle 'LustyExplorer'
 Bundle 'LustyJuggler'
@@ -81,8 +74,14 @@ Bundle 'bufexplorer.zip'
 Bundle 'phpcomplete.vim'
 Bundle 'DBGp-client'
 
+" All completion done with tab
+Bundle 'SuperTab-continued.'
+
 " Snippets manager.  Hooks into Tab like YASnippet on emacs.
-Bundle 'snipMate'
+Bundle "git://github.com/MarcWeber/vim-addon-mw-utils.git"
+Bundle "git://github.com/tomtom/tlib_vim.git"
+Bundle "git://github.com/honza/snipmate-snippets.git"
+Bundle "git://github.com/garbas/vim-snipmate.git"
 
 " Fast commenting
 Bundle 'The-NERD-Commenter'
@@ -90,10 +89,3 @@ Bundle 'The-NERD-Commenter'
 " Kill/wipe buffer without rearranging windows
 " :BW is like good ol' C-x k from emacs.
 Bundle 'bufkill.vim'
-
-" Automatically updates ctags files on save
-"Bundle 'AutoTag'
-
-"" local-vimrc.vim (doesn't get along with fugitive)
-"Bundle 'lh-vim-lib'
-"Bundle 'local_vimrc.vim'
