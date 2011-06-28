@@ -12,6 +12,10 @@ set lines=65 columns=152
 set guifont=Envy\ Code\ R\ 11
 
 "-- window appearance --------------------------------------------------
-" turn on a nice syntax theme.  xoria256 is really nice; as is twilight.
+" turn on a nice syntax theme.  Here's a list of ones I like:
+"  - xoria256
+"  - twilight
+"  - herald
+"  - jellybeans
 filetype plugin on
-colorscheme xoria256
+colorscheme jellybeans
