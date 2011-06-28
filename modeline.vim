@@ -11,10 +11,12 @@ set laststatus=2
 
 function! MyStatusLine(mode)
 	let statusline  = "[%F]\ "
-	" line/column of cursor
-	let statusline .= "(%l/%L,\ %c)\ "
-	" not quite sure tbh
-	let statusline .= "%P%=%h%w\ %y\ "
+	" percentage down/line/column of cursor
+	let statusline .= "(%P: %l/%L,\ %c)\ "
+	" center spacer
+	let statusline .= "%=%h%w\ "
+	" filetype
+	let statusline .= "%y\ "
 	" file encoding and format (e.g. utf-8/unix)
 	let statusline .= "[%{&encoding}:%{&fileformat}]\ "
 	" git status and branch
