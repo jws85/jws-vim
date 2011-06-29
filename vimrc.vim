@@ -56,13 +56,8 @@ map <Leader>tp :tabp<cr>
 "" Move the working directory to the current one
 map <Leader>cd :cd %:p:h<CR>:pwd<CR>
 
-"" Omnicompletion: These have to be emacs-y because you do them in insert-mode.
-" omnicompletion: words
-inoremap <C-x>w <C-x><C-o>
-" omnicompletion: filenames (why C-x C-f?  that's forever going to be 'close text editor' for me!)
-inoremap <C-x>f <C-x><C-f>
-" omnicompletion: lines
-inoremap <C-x>l <C-x><C-l>
+"" Insert mode:  Delete previous word
+imap <C-BS> <C-W>
 
 "" Quickfind: I hate using ex-commands to move through the list.
 map <A-n> :cn<CR>
