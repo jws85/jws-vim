@@ -32,7 +32,7 @@ set wildmode=longest:full,full
 set wildignore+=*.o,*.obj,.git,.svn
 
 "" Turn off auto-insert comment leader.  Really annoying
-set formatoptions-=r
+au BufRead,BufNewFile,BufEnter * set formatoptions-=r
 
 "" search settings
 set incsearch  " incrementally finds matches through the haystack
@@ -100,7 +100,7 @@ let g:LustyJugglerShowKeys = 'a'
 map <Leader>dn :!gvim<space>"+python<space>debugger_run()"<cr>
 
 "" Bufkill: Wipe out buffers without rearranging splits
-map <Leader>k :BW<CR>
+map <Leader>k :BW!<CR>
 
 "" SuperTab: Autocompletion on Tab
 let g:SuperTabDefaultCompletionType = "context"
