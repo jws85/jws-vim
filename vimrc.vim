@@ -31,6 +31,9 @@ set wildmenu
 set wildmode=longest:full,full
 set wildignore+=*.o,*.obj,.git,.svn
 
+"" Turn off auto-insert comment leader.  Really annoying
+set formatoptions-=r
+
 "" search settings
 set incsearch  " incrementally finds matches through the haystack
 set hlsearch   " highlights all matches
