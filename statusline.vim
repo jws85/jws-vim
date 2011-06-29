@@ -12,7 +12,9 @@ set laststatus=2
 function! MyStatusLine(mode)
 	let statusline  = "[%F]\ "
 	" percentage down/line/column of cursor
-	let statusline .= "(%P: %l/%L,\ %c)\ "
+	let statusline .= "[%P: %l/%L,\ %c]\ "
+	" modified flag
+	let statusline .= "%m "
 	" center spacer
 	let statusline .= "%=%h%w\ "
 	" filetype

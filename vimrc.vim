@@ -10,7 +10,7 @@
 source ~/.vim/vundle.vim
 
 "" Sets a pretty modeline at the bottom.
-source ~/.vim/modeline.vim
+source ~/.vim/statusline.vim
 
 "" Loads site-specific settings for both cli-vim and gvim
 source ~/.vim/site/all.vim
