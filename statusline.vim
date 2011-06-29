@@ -10,11 +10,11 @@ syntax on
 set laststatus=2
 
 function! MyStatusLine(mode)
-	let statusline  = "[%F]\ "
+	let statusline = ""
+	" filename
+	let statusline .= "[%F]\ "
 	" percentage down/line/column of cursor
 	let statusline .= "[%P: %l/%L,\ %c]\ "
-	" modified flag
-	let statusline .= "%m "
 	" center spacer
 	let statusline .= "%=%h%w\ "
 	" filetype
@@ -22,7 +22,9 @@ function! MyStatusLine(mode)
 	" file encoding and format (e.g. utf-8/unix)
 	let statusline .= "[%{&encoding}:%{&fileformat}]\ "
 	" git status and branch
-	let statusline .= "%{fugitive#statusline()}\ \ "
+	let statusline .= "%{fugitive#statusline()}"
+	" modified flag
+	let statusline .= " %m"
 	return statusline
 endfunction
 
