@@ -19,10 +19,6 @@ source ~/.vim/site/gui.vim
 " Turn off blinky cursor
 set guicursor+=a:blinkon0
 
-" Turn on cursor line highlighting.  It's too gaudy in the console for
-" me.
-set cursorline
-
 " Line numbering
 set nu!
 
