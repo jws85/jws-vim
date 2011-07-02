@@ -63,16 +63,7 @@ Bundle 'ack.vim'
 Bundle 'bufexplorer.zip'
 
 " PHP integration.
-" A note regarding DBGp-client:  You will need a lot of stuff:
-"  * a working LAMP stack
-"  * xdebug
-"  * some good easy way of enabling the xdebug tracing (there's a nice Firefox
-"    plugin to do this)
-" When this bundle installs, you will also need to symlink the plugin's .vim
-" and .py files into ~/.vim/plugin/.  Lame, yes, but given my current line of
-" work this plugin is indispensible.
 Bundle 'phpcomplete.vim'
-Bundle 'DBGp-client'
 
 " All completion done with tab
 Bundle 'SuperTab-continued.'
