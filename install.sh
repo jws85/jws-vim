@@ -17,15 +17,6 @@ git submodule update
 # Now that vundle is installed, pull in all bundles
 vim -u $VIMDIR/vundle.vim +BundleInstall +q
 
-# FIXME: There should be a site-install script that is run by this
-# that gets special install instructions (e.g. Command-T needs to be
-# compiled; DBGp-client NEEDS to be in the plugin/ dir...)
-
-# Special instructions for DBGp-client
-mkdir $VIMDIR/plugin
-ln -s $VIMDIR/plugin/DBGp-client/plugin/debugger.vim plugin
-ln -s $VIMDIR/plugin/DBGp-client/plugin/debugger.py plugin
-
 # Copy fresh site-configuration files
 cp $VIMDIR/site/all.vim.sample $VIMDIR/site/all.vim
 cp $VIMDIR/site/gui.vim.sample $VIMDIR/site/gui.vim
