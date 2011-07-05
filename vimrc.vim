@@ -93,12 +93,6 @@ map <Leader>j :LustyBufferExplorer<CR>
 map <Leader>bj :LustyJuggler<CR>
 let g:LustyJugglerShowKeys = 'a'
 
-"" DBGpclient: A PHP debugger that talks to an xdebug session
-" I like the debugger, but it gives me problems by rearranging my windows and
-" by spewing garbage tabs everywhere.
-" As a result, I like to segregate it in its own Vim session.
-map <Leader>dn :!gvim<space>"+python<space>debugger_run()"<cr>
-
 "" Bufkill: Wipe out buffers without rearranging splits
 map <Leader>k :BW!<CR>
 
