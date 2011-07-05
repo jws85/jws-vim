@@ -16,22 +16,32 @@ git submodule init
 git submodule update
 vim -u vundle.vim +BundleInstall +q
 mkdir plugin
-ln -s /home/yourname/.vim/plugin/DBGp-client/plugin/debugger.vim plugin
-ln -s /home/yourname/.vim/plugin/DBGp-client/plugin/debugger.py plugin
 cp site/all.vim.sample site/all.vim
 cp site/gui.vim.sample site/gui.vim
 ln -s /home/yourname/.vim/vimrc.vim ~/.vimrc
 ln -s /home/yourname/.vim/gvimrc.vim ~/.gvimrc
 
-Fill out all.vim and gui.vim with your preferences.  If you want to change
-vimrc.vim or gvimrc.vim, you'll be better served by forking this git project
-unless you make the changes by my blessing.  all.vim.sample is (intentionally)
-blank; gui.vim.sample has some settings for fonts, window positioning, etc
-that I use at work but expect to need to change for individual machines.
+Fill out all.vim and gui.vim with your preferences.  If you want to
+change vimrc.vim or gvimrc.vim, you'll be better served by forking
+this git project unless you make the changes by my blessing.
+all.vim.sample is (intentionally) blank; gui.vim.sample has some
+settings for fonts, window positioning, etc. that I use at work but
+expect to need to change for individual machines.
 
-I would keep in mind that my vim setup does not reflect the mindset of the
-'vi'-style users.  I was an emacs user for three years, and while I left mostly
-because 1) it tried to do too many things for you and was a pain to turn those
-features off and 2) the keymap is bogus, I still largely agree with its general
-philosophy of avoiding program switching unless absolutely necessary.  As a
-result, my setup is very "extension"-centric and is not minimal at all.
+I would keep in mind that my vim setup does not reflect the mindset of
+the 'vi'-style users.  I was an emacs user for three years, and while I
+left mostly because 1) it tried to "intelligently" guess what you wanted
+(e.g. indentation) and turned out to be very difficult to turn those
+features off and 2) the keymap is bogus, I still largely agree with its
+general philosophy of avoiding program switching unless absolutely
+necessary.  As a result, my setup is very "extension"-centric and is
+not minimal at all.
+
+(Expanding on #1:  All of Emacs' PHP modes use HTML modes as well (or
+seem to).  Seemed to me like all of the HTML modes assumed you were
+doing SGML/XHTML which is *not* what I have at work, and autoindenting
+would ruin everything with as little as a <br> that did not have the
+closing slash <br />.  Which, given this codebase, is... somewhat
+suboptimal.  On top of this, mumamo had fontifying and line-numbering
+issues and vim was just faster.  I've not used emacs in a month and a
+half and I've not missed it a bit except when dinking about with lisp.)
