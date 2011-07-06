@@ -70,6 +70,9 @@ map <A-p> :cp<CR>
 command! -nargs=+ Calc :py print <args>
 py from math import *
 
+"" Kill omnicomplete window once I'm done with it
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 "-- plugins ------------------------------------------------------------
 " These are all installed with Vundle
 
