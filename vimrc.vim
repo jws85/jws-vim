@@ -90,6 +90,12 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 "-- plugins ------------------------------------------------------------
 " These are all installed with Vundle
 
+"" AVim: Switch between alternate files (*.c/*.h for example)
+" Unmap ,ihn ,is ,ih.  I do not want imappings that interfere with typing
+iunmap <Leader>ihn
+iunmap <Leader>is
+iunmap <Leader>ih
+
 "" Gitv: An extension to fugitive that lets you easily view repo history
 let g:Gitv_OpenHorizontal = 1
 let g:Gitv_CommitStep = 9001
@@ -102,7 +108,7 @@ let g:Gitv_WipeAllOnClose = 1
 " slower than Command-T, especially on large directories.
 " The keybinds here are like ones I got used to when using Command-T
 map <Leader>f :LustyFilesystemExplorerFromHere<CR>
-map <Leader>fr :LustyFilesystemExplorer<CR>
+map <Leader>fr :LustyFilesystemExplorer /<CR>
 map <Leader>fh :LustyFilesystemExplorer ~<CR>
 map <Leader>j :LustyBufferExplorer<CR>
 
