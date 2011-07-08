@@ -90,12 +90,6 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 "-- plugins ------------------------------------------------------------
 " These are all installed with Vundle
 
-"" AVim: Switch between alternate files (*.c/*.h for example)
-" Unmap ,ihn ,is ,ih.  I do not want imappings that interfere with typing
-iunmap <Leader>ihn
-iunmap <Leader>is
-iunmap <Leader>ih
-
 "" Gitv: An extension to fugitive that lets you easily view repo history
 let g:Gitv_OpenHorizontal = 1
 let g:Gitv_CommitStep = 9001

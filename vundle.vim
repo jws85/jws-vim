@@ -51,7 +51,8 @@ Bundle 'LustyExplorer'
 Bundle 'LustyJuggler'
 
 " Switch between header and source files (e.g. C/C++...)
-Bundle 'a.vim' 
+" FIXME:  Turned off while a.vim is buggy
+"Bundle 'a.vim'
 
 " Interface with the 'ack' grep replacement.  On Ubuntu you will need to
 " make a symlink from 'ack-grep' to 'ack' in /usr/bin; apparently 'ack' is
