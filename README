@@ -45,3 +45,45 @@ closing slash <br />.  Which, given this codebase, is... somewhat
 suboptimal.  On top of this, mumamo had fontifying and line-numbering
 issues and vim was just faster.  I've not used emacs in a month and a
 half and I've not missed it a bit except when dinking about with lisp.)
+
+SO, WHAT SHOULD I DO WITH THIS WEIRD ENVIRONMENT?
+
+I like putting often-used functionality on <Leader>, which is mapped to
+the comma key.  Here's some keybindings:
+
+Normal mode:
+   ,f - Directory search (LustyExplorer), from the current directory
+   ,fh - Like ,f from home
+   ,fr - Like ,f from root (/)
+   ,j - Buffer search (LustyExplorer)
+   ,bj - Buffer switching (LustyJuggler)
+   ,be - Buffer switching (BufExplorer)
+   ,bn/,bp - Move between buffers (one by one)
+   ,tn/,tp - Move between tabs
+   ,s - Toggle visible control characters (tabs, newlines)
+   ,vev - Edit .vimrc
+   ,veg - Edit .gvimrc
+   ,vrv - Reload .vimrc
+   ,vrg - Reload .gvimrc
+
+Insert mode:  (not as many here)
+   C-Backspace - Delete previous word
+   C-Enter - Start snipMate
+   Tab - Indent unless at the end of nonwhitespace, then use SuperTab
+
+EVIL BUGGY ISSUES:
+
+a.vim remaps the following bindings in normal AND INSERT MODE:
+
+ <Leader>ih
+ <Leader>ihn
+ <Leader>is
+
+The insert keymapping is evil for two reasons:
+ - Vim now eats those bindings for a feature that I rarely use, and
+ - I like <Leader> = ','  So now whenever I use comma, vim glitches
+   visibly while it tries to figure out whether I'm leading into a
+   keymapping or just trying to write out a parameters list :(
+As a result, I'm disabling a.vim for now until I can make a version
+of my own that either turns off or offers a toggleable option for the
+insert bindings.
