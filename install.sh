@@ -1,8 +1,6 @@
 #!/bin/bash
 # Install script for my vim setup
 # This is a very rough script... planning on making it much better soon.
-# Author:  Justin Smith (jsmith@inttekmail.inttek.net)
-# Date:    2011-06-03
 
 VIMDIR=$HOME/.vim
 

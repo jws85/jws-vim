@@ -1,6 +1,6 @@
-I would suggest reading this, then reading the files 'vimrc.vim' and
-'gvimrc.vim' before installing, just so you "know what you're getting."
-I'd also suggest backing up your old .(g)vimrc and .vim/ folder.
+This is a giant abomination of a vim configuration, done by someone who
+used emacs for three years.  It's been evolving for about three months
+now...
 
 To install, you need
  * vim (duh)
@@ -8,82 +8,9 @@ To install, you need
     - preferably also compiled with GUI support
  * git (so Vundle can pull down what it needs)
 
-There is a rough, untested script that purports to do the below things.
-Until I get it working, just do these things (yes it's a pain):
+To install, first back up your old .vim/ directory as well as .vimrc
+and .gvimrc.  (If you skipped over that sentence, please go back and
+make sure you did all of that!)  Then run install.sh and pray.
 
-cp -r [the folder with all this stuff in it] ~/.vim
-git submodule init
-git submodule update
-vim -u vundle.vim +BundleInstall +q
-mkdir plugin
-cp site/all.vim.sample site/all.vim
-cp site/gui.vim.sample site/gui.vim
-ln -s /home/yourname/.vim/vimrc.vim ~/.vimrc
-ln -s /home/yourname/.vim/gvimrc.vim ~/.gvimrc
-
-Fill out all.vim and gui.vim with your preferences.  If you want to
-change vimrc.vim or gvimrc.vim, you'll be better served by forking
-this git project unless you make the changes by my blessing.
-all.vim.sample is (intentionally) blank; gui.vim.sample has some
-settings for fonts, window positioning, etc. that I use at work but
-expect to need to change for individual machines.
-
-I would keep in mind that my vim setup does not reflect the mindset of
-the 'vi'-style users.  I was an emacs user for three years, and while I
-left mostly because 1) it tried to "intelligently" guess what you wanted
-(e.g. indentation) and turned out to be very difficult to turn those
-features off and 2) the keymap is bogus, I still largely agree with its
-general philosophy of avoiding program switching unless absolutely
-necessary.  As a result, my setup is very "extension"-centric and is
-not minimal at all.
-
-(Expanding on #1:  All of Emacs' PHP modes use HTML modes as well (or
-seem to).  Seemed to me like all of the HTML modes assumed you were
-doing SGML/XHTML which is *not* what I have at work, and autoindenting
-would ruin everything with as little as a <br> that did not have the
-closing slash <br />.  Which, given this codebase, is... somewhat
-suboptimal.  On top of this, mumamo had fontifying and line-numbering
-issues and vim was just faster.  I've not used emacs in a month and a
-half and I've not missed it a bit except when dinking about with lisp.)
-
-SO, WHAT SHOULD I DO WITH THIS WEIRD ENVIRONMENT?
-
-I like putting often-used functionality on <Leader>, which is mapped to
-the comma key.  Here's some keybindings:
-
-Normal mode:
-   ,f - Directory search (LustyExplorer), from the current directory
-   ,fh - Like ,f from home
-   ,fr - Like ,f from root (/)
-   ,j - Buffer search (LustyExplorer)
-   ,bj - Buffer switching (LustyJuggler)
-   ,be - Buffer switching (BufExplorer)
-   ,bn/,bp - Move between buffers (one by one)
-   ,tn/,tp - Move between tabs
-   ,s - Toggle visible control characters (tabs, newlines)
-   ,vev - Edit .vimrc
-   ,veg - Edit .gvimrc
-   ,vrv - Reload .vimrc
-   ,vrg - Reload .gvimrc
-
-Insert mode:  (not as many here)
-   C-Backspace - Delete previous word
-   C-Enter - Start snipMate
-   Tab - Indent unless at the end of nonwhitespace, then use SuperTab
-
-EVIL BUGGY ISSUES:
-
-a.vim remaps the following bindings in normal AND INSERT MODE:
-
- <Leader>ih
- <Leader>ihn
- <Leader>is
-
-The insert keymapping is evil for two reasons:
- - Vim now eats those bindings for a feature that I rarely use, and
- - I like <Leader> = ','  So now whenever I use comma, vim glitches
-   visibly while it tries to figure out whether I'm leading into a
-   keymapping or just trying to write out a parameters list :(
-As a result, I'm disabling a.vim for now until I can make a version
-of my own that either turns off or offers a toggleable option for the
-insert bindings.
+This configuration Works For Me(tm) and I give no warranty that it will
+do the same for you.
