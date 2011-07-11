@@ -10,7 +10,11 @@ To install, you need
 
 To install, first back up your old .vim/ directory as well as .vimrc
 and .gvimrc.  (If you skipped over that sentence, please go back and
-make sure you did all of that!)  Then run install.sh and pray.
+make sure you did all of that!)  Then:
+ - git clone git@github.com:jws85/jws-vim.git ~/.vim
+ - cd ~/.vim
+ - ./install.sh (This will create a lot of output.  Pray to whatever
+   deity you believe in (or don't :P) that it works)
 
 This configuration Works For Me(tm) and I give no warranty that it will
 do the same for you.
