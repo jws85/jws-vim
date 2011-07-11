@@ -60,6 +60,9 @@ Bundle 'LustyJuggler'
 " me.
 Bundle 'ack.vim'
 
+" Maintains a global ctags file
+Bundle 'easytags.vim'
+
 " BufExplorer
 Bundle 'bufexplorer.zip'
 
