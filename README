@@ -7,6 +7,7 @@ To install, you need
     - has to be compiled with Python and Ruby support
     - preferably also compiled with GUI support
  * git (so Vundle can pull down what it needs)
+ * Exuberant ctags (for EasyTag)
 
 To install, first back up your old .vim/ directory as well as .vimrc
 and .gvimrc.  (If you skipped over that sentence, please go back and
