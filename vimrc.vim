@@ -119,6 +119,7 @@ map <Leader>j :LustyBufferExplorer<CR>
 
 "" LustyJuggler: Another fast buffer finder with a slightly NSFW name
 map <Leader>bj :LustyJuggler<CR>
+map <C-6> :LustyJugglePrevious<cr>
 let g:LustyJugglerShowKeys = 'a'
 
 "" Bufkill: Wipe out buffers without rearranging splits
