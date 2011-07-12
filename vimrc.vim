@@ -70,8 +70,11 @@ map <Leader>d <ESC>:e %:p:h/<CR>
 "" Switch buffers and tabs easier
 map <Leader>bn :bn<cr>
 map <Leader>bp :bp<cr>
+map <Leader>bk :bw!<cr>
 map <Leader>tn :tabn<cr>
 map <Leader>tp :tabp<cr>
+map <Leader>tc :tabnew<cr>
+map <Leader>tk :tabclose<cr>
 
 "" Move the working directory to the current one
 map <Leader>cd :cd %:p:h<CR>:pwd<CR>
@@ -80,6 +83,9 @@ map <Leader>cd :cd %:p:h<CR>:pwd<CR>
 imap <C-BS> <C-W>
 
 "" Quickfind: I hate using ex-commands to move through the list.
+map <Leader>qn :cn<cr>
+map <Leader>qp :cp<cr>
+map <Leader>qc :ccl<cr>
 map <A-n> :cn<CR>
 map <A-p> :cp<CR>
 
@@ -115,6 +121,7 @@ let g:LustyJugglerShowKeys = 'a'
 
 "" Bufkill: Wipe out buffers without rearranging splits
 map <Leader>k :BW!<CR>
+map <Leader>bk :BW!<cr>
 
 "" SuperTab: Autocompletion on Tab
 let g:SuperTabDefaultCompletionType = "context"
