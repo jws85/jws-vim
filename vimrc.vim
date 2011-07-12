@@ -55,6 +55,8 @@ nnoremap <Leader>sf :match<CR>
 
 "" Mappings to edit various vim settings files, and to reload the vimrc
 "" or gvimrc afterwards
+" e = edit, r = reload
+" v = .vimrc, g = .gvimrc, sv = site vimrc, sg = site gvimrc
 map <Leader>vev :e ~/.vimrc<cr>
 map <Leader>veg :e ~/.gvimrc<cr>
 map <Leader>vesv :e ~/.vim/site/all.vim<cr>
