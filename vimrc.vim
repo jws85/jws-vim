@@ -49,6 +49,9 @@ let mapleader = ","
 
 "" Toggle whitespace
 map <Leader>s :set list!<cr>
+highlight ExtraWhitespace ctermbg=red guibg=red
+nnoremap <Leader>sn :match ExtraWhitespace /^\s* \s*\<Bar>\s\+$/<CR>
+nnoremap <Leader>sf :match<CR>
 
 "" Mappings to edit various vim settings files, and to reload the vimrc
 "" or gvimrc afterwards
