@@ -43,6 +43,9 @@ set smartcase  " search is case sensitive iff a capital letter is in the needle
 "" I do NOT miss the chording from emacs and try to avoid it with leader keys,
 "" unless it's an insert-mode mapping (i.e. omnicompletion).
 
+"" Unset last search pattern by hitting escape
+nnoremap <esc> :noh<return><esc>
+
 "" Leader: Sets the leader to comma instead of backslash.
 " I use the leader a lot like emacs uses C-x.
 let mapleader = ","
