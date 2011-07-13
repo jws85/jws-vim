@@ -25,12 +25,12 @@ Bundle 'jellybeans.vim'
 Bundle 'twilight'
 Bundle 'inkpot'
 Bundle 'Zenburn'
-Bundle 'herald.vim'
 Bundle 'xoria256.vim'
 Bundle 'Solarized'
 Bundle 'BusyBee'
 Bundle 'Wombat'
 Bundle 'darkspectrum'
+Bundle 'Mustang2'
 
 "-- installed bundles --------------------------------------------------
 
