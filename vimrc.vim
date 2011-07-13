@@ -138,3 +138,8 @@ let g:SuperTabLongestEnhanced = 1
 " from the SuperTab one
 let g:snips_trigger_key='<C-CR>'
 
+"-- gui stuff -----------------------------------------------------------
+" TESTING
+if has("gui_running")
+	source ~/.vim/gvimrc.vim
+endif

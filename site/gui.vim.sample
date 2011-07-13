@@ -4,18 +4,29 @@
 " Date:    2011-06-03
 
 "-- window positioning -------------------------------------------------
-" It doesn't work right on Ubuntu 11.04, damnit.
+"" Set window position at top left of screen
 winpos 0 0
+
+"-- window size ---------------------------------------------------------
+" Tells gvim that we will not be using any of that toolbar crud and size
+" the window appropriately
+set guiheadroom=-20
+" Deprecated window size... only thing that works for me on Ubuntu :P
+winsize 152 65
+" 'Modern' way of setting window size
 set lines=65 columns=152
 
-" i suppose i'll change the font again when i get bored
+"-- font ----------------------------------------------------------------
+" Envy Code R is available for free here:
+" http://damieng.com/blog/2008/05/26/envy-code-r-preview-7-coding-font-released
+" It is the single best programming font I've come across, though your
+" tastes might differ from mine...
 set guifont=Envy\ Code\ R\ 11
 
 "-- window appearance --------------------------------------------------
 " turn on a nice syntax theme.  Here's a list of ones I like:
-"  - xoria256
-"  - twilight
-"  - herald
-"  - jellybeans
+" - twilight
+" - xoria256
+" - jellybeans
 filetype plugin on
-colorscheme jellybeans
+colorscheme twilight

@@ -6,7 +6,6 @@ VIMDIR=$HOME/.vim
 
 # FIXME: Back up any existing ~/.(g)vimrc to ~/.(g)vimrc.bak
 # FIXME: Back up any existing ~/.vim/ to ~/.vim.bak
-# FIXME: Copy entire folder from where it is, to ~/.vim/
 
 # Get the vundle installation in place
 git submodule init
@@ -21,5 +20,4 @@ cp $VIMDIR/site/gui.vim.sample $VIMDIR/site/gui.vim
 
 # Make symlinks to the install files
 ln -s $VIMDIR/vimrc.vim $HOME/.vimrc
-ln -s $VIMDIR/gvimrc.vim $HOME/.gvimrc
 
