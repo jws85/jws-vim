@@ -31,6 +31,7 @@ Bundle 'BusyBee'
 Bundle 'Wombat'
 Bundle 'darkspectrum'
 Bundle 'Mustang2'
+Bundle 'tir_black'
 
 "-- installed bundles --------------------------------------------------
 
