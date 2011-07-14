@@ -44,7 +44,7 @@ set smartcase  " search is case sensitive iff a capital letter is in the needle
 "" unless it's an insert-mode mapping (i.e. omnicompletion).
 
 "" Unset last search pattern by hitting escape
-nnoremap <esc> :noh<return><esc>
+nnoremap <cr> :noh<cr><cr>
 
 "" Leader: Sets the leader to comma instead of backslash.
 " I use the leader a lot like emacs uses C-x.
