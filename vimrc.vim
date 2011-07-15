@@ -1,10 +1,3 @@
-"" Justin Smith's riced out .vimrc
-"" I used emacs for three years and thus have the associated 'brain damage'
-"" with needing as much unnecessary shit as possible to write code.  Oh well.
-""
-"" Author:  Justin Smith <jwsmith2@gmail.com>
-"" Date:    2011-06-03
-
 "-- external files -----------------------------------------------------
 "" Go look how many plugins I've got/tried and gasp in horror.
 source ~/.vim/vundle.vim

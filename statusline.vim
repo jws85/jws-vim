@@ -1,9 +1,6 @@
 " http://www.reddit.com/r/vim/comments/gexi6/a_smarter_statusline_code_in_comments/
 " Based on the general structure of this guy's statusline, but without the
 " ricey mode colorizing.
-"
-" Author:  Justin Smith <jwsmith2@gmail.com> and some dude on Reddit
-" Date:    2011.05.25
 
 set nocompatible
 syntax on

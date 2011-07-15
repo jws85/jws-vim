@@ -1,10 +1,3 @@
-" Justin Smith's riced-out .gvimrc
-" emacs never had a good way of having different settings for using it in the
-" terminal vs. using the GUI version.  Thankfully vim does this quite well.
-"
-" Author:  Justin Smith <jwsmith2@gmail.com>
-" Date:    2011-06-30
-
 "-- Loading site file --------------------------------------------------
 " Certain settings (color schemes, window size/position, and font size)
 " I find need to be configured on a per-install basis, so I've moved
