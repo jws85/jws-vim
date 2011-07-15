@@ -40,3 +40,6 @@ set guioptions-=m
 " remember to tab over, or to USE THE MOUSE to use them.  Turn them
 " off!
 set guioptions+=c
+
+"" Sets a pretty modeline at the bottom.
+source ~/.vim/statusline.vim

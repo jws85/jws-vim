@@ -9,11 +9,13 @@
 "" Go look how many plugins I've got/tried and gasp in horror.
 source ~/.vim/vundle.vim
 
-"" Sets a pretty modeline at the bottom.
-source ~/.vim/statusline.vim
-
 "" Loads site-specific settings for both cli-vim and gvim
 source ~/.vim/site/all.vim
+
+"" If the GUI is running, load GUI-specific settings
+if has("gui_running")
+	source ~/.vim/gvimrc.vim
+endif
 
 "-- settings -----------------------------------------------------------
 "" No color theme set here:  I find the angry fruit salad default easier to read
@@ -139,7 +141,3 @@ let g:SuperTabLongestEnhanced = 1
 let g:snips_trigger_key='<C-CR>'
 
 "-- gui stuff -----------------------------------------------------------
-" TESTING
-if has("gui_running")
-	source ~/.vim/gvimrc.vim
-endif
