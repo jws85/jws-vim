@@ -20,7 +20,7 @@ source ~/.vim/site/gui.vim
 set guicursor+=a:blinkon0
 
 " Line numbering
-set nu!
+set nu
 
 " Turn off scrollbars
 set guioptions+=LlRrb
