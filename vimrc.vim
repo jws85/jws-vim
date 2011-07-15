@@ -10,6 +10,10 @@ if has("gui_running")
 	source ~/.vim/gvimrc.vim
 endif
 
+"-- syntax highlighting ------------------------------------------------
+"" Needs to be set here to turn on for the terminal as well
+syntax on
+
 "-- settings -----------------------------------------------------------
 "" No color theme set here:  I find the angry fruit salad default easier to read
 "" in the terminal, so I set one in my .gvimrc.
@@ -133,5 +137,3 @@ let g:SuperTabLongestEnhanced = 1
 " I don't use it as much so I'd rather have the trigger key away
 " from the SuperTab one
 let g:snips_trigger_key='<C-CR>'
-
-"-- gui stuff -----------------------------------------------------------
