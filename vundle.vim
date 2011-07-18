@@ -94,8 +94,5 @@ Bundle 'gitv'
 " me.
 Bundle 'ack.vim'
 
-" Maintains a global ctags file
-Bundle 'easytags.vim'
-
 " PHP completion
 Bundle 'phpcomplete.vim'
