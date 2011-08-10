@@ -1,9 +1,3 @@
-"-- Loading site file --------------------------------------------------
-" Certain settings (color schemes, window size/position, and font size)
-" I find need to be configured on a per-install basis, so I've moved
-" them into an external file that is *not* kept under source control.
-source ~/.vim/site/gui.vim
-
 "-- Cross-site GUI appearance ------------------------------------------
 " I used emacs and so got used to nice window controls embedded into the
 " text editor itself.  Vim can do this, but by default it's a lot more

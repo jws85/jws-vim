@@ -2,14 +2,6 @@
 "" Go look how many plugins I've got/tried and gasp in horror.
 source ~/.vim/vundle.vim
 
-"" Loads site-specific settings for both cli-vim and gvim
-source ~/.vim/site/all.vim
-
-"" If the GUI is running, load GUI-specific settings
-if has("gui_running")
-	source ~/.vim/gvimrc.vim
-endif
-
 "-- syntax highlighting ------------------------------------------------
 "" Needs to be set here to turn on for the terminal as well
 syntax on
@@ -56,18 +48,23 @@ nnoremap <Leader>sn :match ExtraWhitespace /^\s* \s*\<Bar>\s\+$/<CR>
 nnoremap <Leader>sf :match<CR>
 
 "" Mappings to edit various vim settings files, and to reload the vimrc
-"" or gvimrc afterwards
-" e = edit, r = reload
-" v = .vimrc, sv = site vimrc, sg = site gvimrc
-" There's no longer any need to reload the gvimrc, as it is done with
-" the vimrc.
+"" or gvimrc afterwards.  The 'global' (g)vimrc are the files in this dir,
+"" which contain settings I want to be consistent across machines.
+" Edit vimrc and gvimrc
 map <Leader>ve :e ~/.vimrc<cr>
 map <Leader>vev :e ~/.vimrc<cr>
-map <Leader>veg :e ~/.vim/gvimrc.vim<cr>
-map <Leader>vesv :e ~/.vim/site/all.vim<cr>
-map <Leader>vesg :e ~/.vim/site/gui.vim<cr>
+map <Leader>veg :e ~/.gvimrc<cr>
+" Edit global vimrc and gvimrc
+map <Leader>vegv :e ~/.vim/vimrc.vim<cr>
+map <Leader>vegg :e ~/.vim/gvimrc.vim<cr>
+" Edit template vimrc and gvimrc
+map <Leader>vetv :e ~/.vim/site/all.vim<cr>
+map <Leader>vetg :e ~/.vim/site/gui.vim<cr>
+" Edit vundle file
 map <Leader>veb :e ~/.vim/vundle.vim<cr>
+" Reload vimrc and gvimrc
 map <Leader>vr :source ~/.vimrc<cr>
+map <Leader>vg :source ~/.gvimrc<cr>
 
 "" view current directory
 map <Leader>d <ESC>:e %:p:h/<CR>
