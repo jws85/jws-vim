@@ -16,10 +16,7 @@ call vundle#rc()
 " Vundle itself
 Bundle 'gmarik/vundle'
 
-"-- installed bundles --------------------------------------------------
-
 "-- file and buffer management -----------------------------------------
-
 "" Fast file- and buffer-finding
 Bundle 'LustyExplorer'
 Bundle 'LustyJuggler'
