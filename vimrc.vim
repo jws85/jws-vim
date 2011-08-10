@@ -134,3 +134,7 @@ let g:SuperTabLongestEnhanced = 1
 " I don't use it as much so I'd rather have the trigger key away
 " from the SuperTab one
 let g:snips_trigger_key='<C-CR>'
+
+"" CloseTag: Quickly close HTML tags
+" This is necessary to get it working in PHP
+au Filetype php let b:unaryTagsStack="area base br dd dt hr img input link meta param"
