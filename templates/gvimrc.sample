@@ -1,5 +1,5 @@
 "-- Load global gvimrc -------------------------------------------------
-source ~/.vim/vimrc.vim
+source ~/.vim/gvimrc.vim
 
 "-- window positioning -------------------------------------------------
 "" Set window position at top left of screen
