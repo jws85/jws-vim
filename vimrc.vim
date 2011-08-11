@@ -1,9 +1,10 @@
-"" Justin Smith's riced out .vimrc
-"" I used emacs for three years and thus have the associated 'brain damage'
-"" with needing as much unnecessary shit as possible to write code.  Oh well.
-""
-"" Author:  Justin Smith <jwsmith2@gmail.com>
-"" Date:    2011-06-03
+"-- external files -----------------------------------------------------
+"" Go look how many plugins I've got/tried and gasp in horror.
+source ~/.vim/vundle.vim
+
+"-- syntax highlighting ------------------------------------------------
+"" Needs to be set here to turn on for the terminal as well
+syntax on
 
 "-- 'degraded' mode ----------------------------------------------------
 "" Turns off features that may make this setup slow on remote
@@ -13,16 +14,6 @@ let g:degraded_mode = 0
 fu! DegradedVim()
 	let g:degraded_mode = 1
 endfunction
-
-"-- external files -----------------------------------------------------
-"" Go look how many plugins I've got/tried and gasp in horror.
-source ~/.vim/vundle.vim
-
-"" Sets a pretty modeline at the bottom.
-source ~/.vim/statusline.vim
-
-"" Loads site-specific settings for both cli-vim and gvim
-source ~/.vim/site/all.vim
 
 "-- settings -----------------------------------------------------------
 "" No color theme set here:  I find the angry fruit salad default easier to read
@@ -72,17 +63,23 @@ map <Leader>yj :set filetype=javascript<cr>
 map <Leader>yv :set filetype=vim<cr>
 
 "" Mappings to edit various vim settings files, and to reload the vimrc
-"" or gvimrc afterwards
-" e = edit, r = reload
-" v = .vimrc, g = .gvimrc, sv = site vimrc, sg = site gvimrc
+"" or gvimrc afterwards.  The 'global' (g)vimrc are the files in this dir,
+"" which contain settings I want to be consistent across machines.
+" Edit vimrc and gvimrc
+map <Leader>ve :e ~/.vimrc<cr>
 map <Leader>vev :e ~/.vimrc<cr>
 map <Leader>veg :e ~/.gvimrc<cr>
-map <Leader>vesv :e ~/.vim/site/all.vim<cr>
-map <Leader>vesg :e ~/.vim/site/gui.vim<cr>
+" Edit global vimrc and gvimrc
+map <Leader>vegv :e ~/.vim/vimrc.vim<cr>
+map <Leader>vegg :e ~/.vim/gvimrc.vim<cr>
+" Edit template vimrc and gvimrc
+map <Leader>vetv :e ~/.vim/site/all.vim<cr>
+map <Leader>vetg :e ~/.vim/site/gui.vim<cr>
+" Edit vundle file
 map <Leader>veb :e ~/.vim/vundle.vim<cr>
+" Reload vimrc and gvimrc
 map <Leader>vr :source ~/.vimrc<cr>
-map <Leader>vrv :source ~/.vimrc<cr>
-map <Leader>vrg :source ~/.gvimrc<cr>
+map <Leader>vg :source ~/.gvimrc<cr>
 
 "" view current directory
 map <Leader>d <ESC>:e %:p:h/<CR>
@@ -153,8 +150,6 @@ let g:SuperTabLongestEnhanced = 1
 " from the SuperTab one
 let g:snips_trigger_key='<C-CR>'
 
-"-- gui stuff -----------------------------------------------------------
-" TESTING
-if has("gui_running")
-	source ~/.vim/gvimrc.vim
-endif
+"" CloseTag: Quickly close HTML tags
+" This is necessary to get it working in PHP
+au Filetype php let b:unaryTagsStack="area base br dd dt hr img input link meta param"

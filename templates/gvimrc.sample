@@ -1,7 +1,5 @@
-" Set GUI settings that I *WILL* want to change between computers here.
-"
-" Author:  Justin Smith <jwsmith2@gmail.com>
-" Date:    2011-06-03
+"-- Load global gvimrc -------------------------------------------------
+source ~/.vim/gvimrc.vim
 
 "-- window positioning -------------------------------------------------
 "" Set window position at top left of screen
