@@ -1,3 +1,10 @@
+"-- external files -----------------------------------------------------
+"" This keeps track of colorschemes
+source ~/.vim/gvundle.vim
+
+"" Sets a pretty modeline at the bottom.
+source ~/.vim/statusline.vim
+
 "-- Cross-site GUI appearance ------------------------------------------
 " I used emacs and so got used to nice window controls embedded into the
 " text editor itself.  Vim can do this, but by default it's a lot more
@@ -27,6 +34,3 @@ set guioptions-=m
 " remember to tab over, or to USE THE MOUSE to use them.  Turn them
 " off!
 set guioptions+=c
-
-"" Sets a pretty modeline at the bottom.
-source ~/.vim/statusline.vim
