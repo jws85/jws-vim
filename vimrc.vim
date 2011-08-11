@@ -65,6 +65,12 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 nnoremap <Leader>sn :match ExtraWhitespace /^\s* \s*\<Bar>\s\+$/<CR>
 nnoremap <Leader>sf :match<CR>
 
+"" Change syntaxes
+map <Leader>yp :set filetype=php<cr>
+map <Leader>yh :set filetype=html<cr>
+map <Leader>yj :set filetype=javascript<cr>
+map <Leader>yv :set filetype=vim<cr>
+
 "" Mappings to edit various vim settings files, and to reload the vimrc
 "" or gvimrc afterwards
 " e = edit, r = reload
