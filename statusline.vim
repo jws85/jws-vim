@@ -22,7 +22,9 @@ function! MyStatusLine(mode)
 	" file encoding and format (e.g. utf-8/unix)
 	let statusline .= "[%{&encoding}:%{&fileformat}]\ "
 	" git status and branch
-	let statusline .= "%{fugitive#statusline()}"
+	if g:degraded_mode == 1
+		let statusline .= "%{fugitive#statusline()}"
+	endif
 	" modified flag
 	let statusline .= " %m"
 	return statusline

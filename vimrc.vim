@@ -5,6 +5,15 @@
 "" Author:  Justin Smith <jwsmith2@gmail.com>
 "" Date:    2011-06-03
 
+"-- 'degraded' mode ----------------------------------------------------
+"" Turns off features that may make this setup slow on remote
+"" connections.
+"" gvim --cmd=DegradedVim
+let g:degraded_mode = 0
+fu! DegradedVim()
+	let g:degraded_mode = 1
+endfunction
+
 "-- external files -----------------------------------------------------
 "" Go look how many plugins I've got/tried and gasp in horror.
 source ~/.vim/vundle.vim
