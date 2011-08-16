@@ -1,7 +1,4 @@
 "-- external files -----------------------------------------------------
-"" This keeps track of colorschemes
-source ~/.vim/gvundle.vim
-
 "" Sets a pretty modeline at the bottom.
 source ~/.vim/statusline.vim
 
