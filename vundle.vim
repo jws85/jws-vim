@@ -51,6 +51,9 @@ Bundle 'matchit.zip'
 " Mapping to autoclose HTML tags
 Bundle 'closetag.vim'
 
+" Write HTML faster
+Bundle 'ZenCoding.vim'
+
 " All completion done with tab
 Bundle 'SuperTab-continued.'
 
