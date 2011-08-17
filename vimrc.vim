@@ -153,3 +153,36 @@ let g:snips_trigger_key='<C-CR>'
 "" CloseTag: Quickly close HTML tags
 " This is necessary to get it working in PHP
 au Filetype php let b:unaryTagsStack="area base br dd dt hr img input link meta param"
+
+"" NeoComplCache: Completion on every hormone possible
+let g:neocomplcache_enable_at_startup = 1
+" Turn neocomplcache autopopup off; I prefer more SuperTab-ish behavior
+let g:neocomplcache_disable_auto_complete = 1
+" Use smartcase
+let g:neocomplcache_enable_smart_case = 1
+" Use CamelCase completion
+let g:neocomplcache_enable_camel_case_completion = 1
+" Use underscore completion
+let g:neocomplcache_enable_underbar_completion = 1
+" Set minimum syntax keyword length
+let g:neocomplcache_min_syntax_length = 2
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+" Enable omnicompletion for different languages
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+let g:neocomplcache_omni_patterns = {}
+let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+" OMFG popup on <tab>!!  arigatou gozaimasu Shougo-san
+fu! s:check_back_space()"{{{
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1] =~ '\s'
+endfunction"}}}
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : "\<C-x>\<C-u>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : <SID>check_back_space() ? "\<S-TAB>" : "\<C-x>\<C-u>"
+"inoremap <expr><cr> pumvisible() ? neocomplcache#close_popup() ? : "\<CR>"
+"inoremap <expr><esc> pumvisible() ? neocomplcache#cancel_popup() ? "\<ESC>"
