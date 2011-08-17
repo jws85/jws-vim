@@ -70,9 +70,6 @@ Bundle 'ZenCoding.vim'
 " A better-ish completion system
 Bundle 'neocomplcache'
 
-" All completion done with tab
-"Bundle 'SuperTab-continued.'
-
 " Snippets manager.  Hooks into Tab like YASnippet on emacs.
 Bundle "git://github.com/MarcWeber/vim-addon-mw-utils.git"
 Bundle "git://github.com/tomtom/tlib_vim.git"

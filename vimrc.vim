@@ -141,10 +141,6 @@ let g:LustyJugglerShowKeys = 'a'
 map <Leader>k :BW!<CR>
 map <Leader>bk :BW!<cr>
 
-"" SuperTab: Autocompletion on Tab
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabLongestEnhanced = 1
-
 "" SnipMate: Snippets manager
 " I don't use it as much so I'd rather have the trigger key away
 " from the SuperTab one
