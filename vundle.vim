@@ -41,10 +41,6 @@ Bundle 'LustyJuggler'
 " BufExplorer
 Bundle 'bufexplorer.zip'
 
-" Switch between header and source files (e.g. C/C++...)
-" FIXME:  Turned off while a.vim has those awful insert-mode keymaps
-"Bundle 'a.vim'
-
 " Kill/wipe buffer without rearranging windows
 " :BW! is like good ol' C-x k from emacs.
 Bundle 'bufkill.vim'
