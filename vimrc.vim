@@ -151,7 +151,8 @@ let g:snips_trigger_key='<C-CR>'
 au Filetype php let b:unaryTagsStack="area base br dd dt hr img input link meta param"
 au Filetype xml let b:unaryTagsStack="area base br dd dt hr img input link meta param"
 
-"" NeoComplCache: Completion on every hormone possible
+"" NeoComplCache: Completion, after it has popped every hormone and pill possible
+" neocomplcache also has snippets, but iirc they were buggier than SnipMate
 let g:neocomplcache_enable_at_startup = 1
 " Turn neocomplcache autopopup off; I prefer more SuperTab-ish behavior
 let g:neocomplcache_disable_auto_complete = 1
@@ -164,7 +165,7 @@ let g:neocomplcache_enable_underbar_completion = 1
 " Set minimum syntax keyword length
 let g:neocomplcache_min_syntax_length = 2
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-" Enable omnicompletion for different languages
+" Enable omnicomp for different langs (warning, php & ruby might slow it down)
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
@@ -174,7 +175,8 @@ autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 let g:neocomplcache_omni_patterns = {}
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-" OMFG popup on <tab>!!  arigatou gozaimasu Shougo-san
+" OMFG popup on <tab>!!  Arigatou gozaimasu Shougo-san ^_^
+" https://github.com/Shougo/neocomplcache/wiki/neocomplcache-tips%3A
 fu! s:check_back_space()"{{{
 	let col = col('.') - 1
 	return !col || getline('.')[col - 1] =~ '\s'
