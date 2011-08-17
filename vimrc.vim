@@ -149,6 +149,7 @@ let g:snips_trigger_key='<C-CR>'
 "" CloseTag: Quickly close HTML tags
 " This is necessary to get it working in PHP
 au Filetype php let b:unaryTagsStack="area base br dd dt hr img input link meta param"
+au Filetype xml let b:unaryTagsStack="area base br dd dt hr img input link meta param"
 
 "" NeoComplCache: Completion on every hormone possible
 let g:neocomplcache_enable_at_startup = 1
