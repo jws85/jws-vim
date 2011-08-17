@@ -147,9 +147,11 @@ map <Leader>bk :BW!<cr>
 let g:snips_trigger_key='<C-CR>'
 
 "" CloseTag: Quickly close HTML tags
-" This is necessary to get it working in PHP
+" The following line is necessary to get it working in any language.
+" It just sets the list of tags that idiomatically don't have a closing tag...
+" Why doesn't CloseTag just set it to blank for unrecognized languages?
 au Filetype php let b:unaryTagsStack="area base br dd dt hr img input link meta param"
-au Filetype xml let b:unaryTagsStack="area base br dd dt hr img input link meta param"
+au Filetype xml let b:unaryTagsStack=""
 
 "" NeoComplCache: Completion, after it has popped every hormone and pill possible
 " neocomplcache also has snippets, but iirc they were buggier than SnipMate
