@@ -183,12 +183,6 @@ fu! s:check_back_space()"{{{
 	let col = col('.') - 1
 	return !col || getline('.')[col - 1] =~ '\s'
 endfunction"}}}
-" Still need to fix these issues:
-" - When you hit tab after some junk, cursor moves down by one.
-" - When you hit tab, first option is not selected (but pressing Enter picks
-"   it anyways).
-" Other than that, works well.
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : <SID>check_back_space() ? "\<TAB>" : "\<C-x>\<C-u>\<C-n>\<Up>"
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ?  "\<TAB>" : "\<C-x>\<C-u>\<C-p>\<Down>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : <SID>check_back_space() ? "\<TAB>" : "\<C-x>\<C-u>\<C-n>"
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ?  "\<TAB>" : "\<C-x>\<C-u>\<C-p>"
 inoremap <expr><CR> pumvisible() ? neocomplcache#smart_close_popup() : "\<CR>"
-"setlocal completeopt+=longest
