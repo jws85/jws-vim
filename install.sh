@@ -15,9 +15,5 @@ git submodule update
 vim -u $VIMDIR/vundle.vim +BundleInstall +q
 
 # Copy fresh site-configuration files
-cp $VIMDIR/site/all.vim.sample $VIMDIR/site/all.vim
-cp $VIMDIR/site/gui.vim.sample $VIMDIR/site/gui.vim
-
-# Make symlinks to the install files
-ln -s $VIMDIR/vimrc.vim $HOME/.vimrc
-
+cp $VIMDIR/site/vimrc.sample ~/.vimrc
+cp $VIMDIR/site/gvimrc.sample ~/.gvimrc
