@@ -1,11 +1,12 @@
 #!/bin/bash
 # Install script for my vim setup
-# This is a very rough script... planning on making it much better soon.
 
 VIMDIR=$HOME/.vim
 
-# FIXME: Back up any existing ~/.(g)vimrc to ~/.(g)vimrc.bak
-# FIXME: Back up any existing ~/.vim/ to ~/.vim.bak
+# Make backups of your old vim files if they exist
+if [ -e $HOME/.vimrc ];  then cp $HOME/.vimrc  $HOME/.vimrc.bak  fi
+if [ -e $HOME/.gvimrc ]; then cp $HOME/.gvimrc $HOME/.gvimrc.bak fi
+if [ -e $HOME/.vim ];    then cp -r $HOME/.vim $HOME/.vim.bak    fi
 
 # Get the vundle installation in place
 git submodule init
@@ -15,5 +16,5 @@ git submodule update
 vim -u $VIMDIR/vundle.vim +BundleInstall +q
 
 # Copy fresh site-configuration files
-cp $VIMDIR/site/vimrc.sample ~/.vimrc
-cp $VIMDIR/site/gvimrc.sample ~/.gvimrc
+cp $VIMDIR/site/vimrc.sample  $HOME/.vimrc
+cp $VIMDIR/site/gvimrc.sample $HOME/.gvimrc
