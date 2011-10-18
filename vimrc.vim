@@ -34,6 +34,10 @@ set wildignore+=*.o,*.obj,.git,.svn
 "" Turn off auto-insert comment leader.  Really annoying
 au BufRead,BufNewFile,BufEnter * set formatoptions-=r
 
+"" Set all /tmp/mutt-* files to mail filetype
+au BufRead,BufNewFile /tmp/mutt-* set tw=72
+au BufRead,BufNewFile /tmp/mutt-* setfiletype mail
+
 "" search settings
 set incsearch  " incrementally finds matches through the haystack
 set hlsearch   " highlights all matches
