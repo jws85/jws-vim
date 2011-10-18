@@ -134,11 +134,12 @@ let g:Gitv_WipeAllOnClose = 1
 map <Leader>f :LustyFilesystemExplorerFromHere<CR>
 map <Leader>fr :LustyFilesystemExplorer /<CR>
 map <Leader>fh :LustyFilesystemExplorer ~<CR>
-map <Leader>j :LustyBufferExplorer<CR>
+map <Leader>b :LustyBufferExplorer<CR>
 
 "" LustyJuggler: Another fast buffer finder with a slightly NSFW name
 map <Leader>bj :LustyJuggler<CR>
 map <C-6> :LustyJugglePrevious<cr>
+map <Leader>j :LustyJugglePrevious<cr>
 let g:LustyJugglerShowKeys = 'a'
 
 "" Bufkill: Wipe out buffers without rearranging splits
