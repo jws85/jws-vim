@@ -1,6 +1,8 @@
 " zen-and-art theme
 " modified to make comments stand out better ~jws 2011/1/2
 " modified to make <?php ?> and such stand out ~jws 2011/1/11
+" modified to make special characters in PHP double-quoted
+"    strings look less jarring ~jws 2011/1/12
 
 set background=dark
 highlight clear
@@ -79,6 +81,7 @@ hi rubyRailsARAssociationMethod  guifg=#dad085 guibg=NONE gui=NONE
 hi rubyRailsARMethod  guifg=#dad085 guibg=NONE gui=NONE
 hi rubyRailsRenderMethod  guifg=#dad085 guibg=NONE gui=NONE
 hi rubyRailsMethod  guifg=#dad085 guibg=NONE gui=NONE
+hi phpSpecialChar  guifg=#6cae37 guibg=NONE gui=NONE
 hi erubyDelimiter  guifg=NONE guibg=NONE gui=NONE
 hi erubyComment  guifg=#3e7496 guibg=NONE gui=italic
 hi erubyRailsMethod  guifg=#dad085 guibg=NONE gui=NONE

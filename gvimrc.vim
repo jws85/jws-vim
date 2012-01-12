@@ -1,7 +1,3 @@
-"-- external files -----------------------------------------------------
-"" Sets a pretty modeline at the bottom.
-source ~/.vim/statusline.vim
-
 "-- Cross-site GUI appearance ------------------------------------------
 " I used emacs and so got used to nice window controls embedded into the
 " text editor itself.  Vim can do this, but by default it's a lot more
