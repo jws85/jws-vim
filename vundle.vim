@@ -32,6 +32,10 @@ Bundle 'Wombat'
 Bundle 'darkspectrum'
 Bundle 'Mustang2'
 Bundle 'tir_black'
+Bundle 'molokai'
+Bundle 'Symfony'
+Bundle 'peaksea'
+Bundle 'railscasts'
 
 "-- file and buffer management -----------------------------------------
 "" Fast file- and buffer-finding
@@ -79,9 +83,12 @@ Bundle "git://github.com/garbas/vim-snipmate.git"
 " Fast commenting
 Bundle 'The-NERD-Commenter'
 
-"-- external commands --------------------------------------------------
+"-- external commands and other miscellany -----------------------------
 " Terminal in vim.  Just one more step towards turning Vim into Emacs
 Bundle 'Conque-Shell'
+
+" Wiki implemented with vim
+Bundle 'vimwiki'
 
 " Git integration
 Bundle 'tpope/vim-fugitive'
@@ -95,3 +102,6 @@ Bundle 'ack.vim'
 
 " PHP completion
 Bundle 'phpcomplete.vim'
+
+" Powerline
+Bundle 'https://github.com/Lokaltog/vim-powerline.git'

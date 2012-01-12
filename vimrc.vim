@@ -26,6 +26,10 @@ set viminfo='100,f1
 "" emacs buffer handling that this pisses me off.
 set hidden
 
+"" Get rid of the godawful swap file system.  I save my files obsessively and
+"" find that this is much more annoying than anything else
+set noswapfile
+
 "" :o/:e/:b/command greedy completion.  Pretty nice, but Command-T is still better.
 set wildmenu
 set wildmode=longest:full,full
@@ -65,6 +69,9 @@ map <Leader>yp :set filetype=php<cr>
 map <Leader>yh :set filetype=html<cr>
 map <Leader>yj :set filetype=javascript<cr>
 map <Leader>yv :set filetype=vim<cr>
+
+"" It blows my mind that there is no 'join lines without space' key yet
+map <C-j> Jx
 
 "" Mappings to edit various vim settings files, and to reload the vimrc
 "" or gvimrc afterwards.  The 'global' (g)vimrc are the files in this dir,
@@ -120,6 +127,9 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 "-- plugins ------------------------------------------------------------
 " These are all installed with Vundle
 
+"" Powerline: Fancy statusbar
+let g:Powerline_symbols = 'fancy'
+
 "" Gitv: An extension to fugitive that lets you easily view repo history
 let g:Gitv_OpenHorizontal = 1
 let g:Gitv_CommitStep = 9001
@@ -156,7 +166,8 @@ let g:snips_trigger_key='<C-CR>'
 " It just sets the list of tags that idiomatically don't have a closing tag...
 " Why doesn't CloseTag just set it to blank for unrecognized languages?
 au Filetype php let b:unaryTagsStack="area base br dd dt hr img input link meta param"
-au Filetype xml let b:unaryTagsStack=""
+au Filetype xml let b:unaryTagsStack="area base br dd dt hr img input link meta param"
+au Filetype html let b:unaryTagsStack="area base br dd dt hr img input link meta param"
 
 "" NeoComplCache: Completion, after it has popped every hormone and pill possible
 " neocomplcache also has snippets, but iirc they were buggier than SnipMate
