@@ -17,5 +17,8 @@ make sure you did all of that!)  Then:
  - ./install.sh (This will create a lot of output.  Pray to whatever
    deity you believe in (or don't :P) that it works)
 
+There is probably some further tweaking that needs to be done and
+documented, but meh.
+
 This configuration Works For Me(tm) and I give no warranty that it will
 do the same for you.

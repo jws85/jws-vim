@@ -1,8 +1,9 @@
-" zen-and-art theme
+" zen-and-art theme, with a number of nitpicky modifications by jws:
 " modified to make comments stand out better ~jws 2011/1/2
 " modified to make <?php ?> and such stand out ~jws 2011/1/11
 " modified to make special characters in PHP double-quoted
 "    strings look less jarring ~jws 2011/1/12
+" modified to make the pmenu show up better ~jws 2011/1/12
 
 set background=dark
 highlight clear
@@ -22,8 +23,8 @@ hi VertSplit  guifg=#353432 guibg=#353432 gui=NONE
 hi MatchParen  guifg=#ae5825 guibg=NONE gui=NONE
 hi StatusLine  guifg=#abb1a3 guibg=#353432 gui=bold
 hi StatusLineNC  guifg=#abb1a3 guibg=#353432 gui=NONE
-hi Pmenu  guifg=#c6b032 guibg=NONE gui=NONE
-hi PmenuSel  guifg=NONE guibg=#404245 gui=NONE
+hi Pmenu  guifg=#c6b032 guibg=#404040 gui=NONE
+hi PmenuSel  guifg=NONE guibg=#545454 gui=NONE
 hi IncSearch  guifg=NONE guibg=#283138 gui=NONE
 hi Search  guifg=NONE guibg=#283138 gui=NONE
 hi Directory  guifg=#86453a guibg=NONE gui=NONE

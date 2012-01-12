@@ -26,5 +26,19 @@ set guifont=Envy\ Code\ R\ 11
 " - twilight
 " - xoria256
 " - jellybeans
+" - zen-and-art, which does not point to the original, but one that
+"   I have uglified for PHP and other nasty things
 filetype plugin on
-colorscheme twilight
+colorscheme zen-and-art
+
+"-- statusline ---------------------------------------------------------
+" I used to have a 'custom' one here, but powerline is so nice that I
+" moved to it instead.  You need to hack your font for it to look its
+" nicest, but whatever.  It's fine even if you don't, however.
+"
+" To hack your font, first install fontforge and python-fontforge.  Then
+" install everything with the install.sh.  Make a backup of your current
+" font.  Then run the script
+"  ~/.vim/bundle/vim-powerline/fontpatcher/fontpatcher [path to your font]
+" Obviously you need a *nix machine to do this on...
+set laststatus=2
