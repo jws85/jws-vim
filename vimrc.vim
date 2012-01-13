@@ -125,10 +125,7 @@ py from math import *
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 "-- plugins ------------------------------------------------------------
-" These are all installed with Vundle
-
-"" Powerline: Fancy statusbar
-let g:Powerline_symbols = 'fancy'
+" These are all installed with Vundle.
 
 "" Gitv: An extension to fugitive that lets you easily view repo history
 let g:Gitv_OpenHorizontal = 1

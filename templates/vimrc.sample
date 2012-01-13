@@ -1,2 +1,4 @@
+" This is a template.  Copy it to ~/.vimrc and go nuts.
+
 "-- Load global vimrc --------------------------------------------------
 source ~/.vim/vimrc.vim

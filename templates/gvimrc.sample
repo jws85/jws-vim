@@ -1,3 +1,5 @@
+" This is a template.  Copy it to ~/.gvimrc and go nuts.
+
 "-- Load global gvimrc -------------------------------------------------
 source ~/.vim/gvimrc.vim
 
@@ -9,8 +11,10 @@ winpos 0 0
 " Tells gvim that we will not be using any of that toolbar crud and size
 " the window appropriately
 set guiheadroom=-20
+
 " Deprecated window size... only thing that works for me on Ubuntu :P
 winsize 152 65
+
 " 'Modern' way of setting window size
 set lines=65 columns=152
 
@@ -19,26 +23,35 @@ set lines=65 columns=152
 " http://damieng.com/blog/2008/05/26/envy-code-r-preview-7-coding-font-released
 " It is the single best programming font I've come across, though your
 " tastes might differ from mine...
+"
+" The font size might have to be tweaked.  On my 1920x1200 Ubuntu work
+" machine, I use 11pt; at home (1440x900, Fedora) I use 10pt.
 set guifont=Envy\ Code\ R\ 11
 
 "-- window appearance --------------------------------------------------
 " turn on a nice syntax theme.  Here's a list of ones I like:
 " - twilight
 " - xoria256
-" - jellybeans
+" - herald
 " - zen-and-art, which does not point to the original, but one that
 "   I have uglified for PHP and other nasty things
+" - jellybeans
+" - inkpot (meh if you have large string constants everywhere)
+" But try the :COLORSCROLL command in Vim and see which one works for
+" you! ^_^
 filetype plugin on
-colorscheme zen-and-art
+colorscheme twilight
 
 "-- statusline ---------------------------------------------------------
 " I used to have a 'custom' one here, but powerline is so nice that I
-" moved to it instead.  You need to hack your font for it to look its
-" nicest, but whatever.  It's fine even if you don't, however.
-"
-" To hack your font, first install fontforge and python-fontforge.  Then
-" install everything with the install.sh.  Make a backup of your current
-" font.  Then run the script
-"  ~/.vim/bundle/vim-powerline/fontpatcher/fontpatcher [path to your font]
-" Obviously you need a *nix machine to do this on...
+" moved to it instead.
 set laststatus=2
+
+" You need to hack your font to turn this on.  If you don't want to hack
+" your font, use 'unicode' instead.  You need to delete your
+" /tmp/Powerline.cache when you change this value.
+"
+" To hack your font, use the fontpatcher utility in the Powerline bundle.
+" Read its instructions before use, and I'd suggest backing up your font
+" too!
+"let g:Powerline_symbols = 'fancy'
