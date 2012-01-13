@@ -21,21 +21,23 @@ Bundle 'gmarik/vundle'
 " Scroll through installed colorschemes (I have 100+ of them so this helps)
 Bundle 'ScrollColors'
 
-Bundle 'jellybeans.vim'
+" And this pulls in the 100 top color schemes
+Bundle 'Color-Sampler-Pack'
+
+" This pulls in some notable ones that are not represented in the above
 Bundle 'twilight'
-Bundle 'inkpot'
-Bundle 'Zenburn'
-Bundle 'xoria256.vim'
 Bundle 'Solarized'
 Bundle 'BusyBee'
 Bundle 'Wombat'
-Bundle 'darkspectrum'
 Bundle 'Mustang2'
 Bundle 'tir_black'
 Bundle 'molokai'
 Bundle 'Symfony'
 Bundle 'peaksea'
-Bundle 'railscasts'
+
+" I also have some more sitting in my colors/* directory.  I've usually
+" tried to tweak them by hand, but I have the eyes of a programmer, not
+" a designer, so they usually look off.  Sorry.
 
 "-- file and buffer management -----------------------------------------
 "" Fast file- and buffer-finding
