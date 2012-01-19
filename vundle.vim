@@ -61,6 +61,9 @@ Bundle 'repeat.vim'
 " Allows you to quickly add surrounding characters
 Bundle 'surround.vim'
 
+" Allows movement in cStyledIdentifiers and also in python_styled_identifiers
+Bundle 'camelcasemotion'
+
 " Increment/decrement dates
 Bundle 'speeddating.vim'
 

@@ -1,5 +1,5 @@
 "-- external files -----------------------------------------------------
-"" Go look how many plugins I've got/tried and gasp in horror.
+"" Go look at how many plugins I've got/tried and gasp in horror.
 source ~/.vim/vundle.vim
 
 "-- syntax highlighting ------------------------------------------------
@@ -41,6 +41,9 @@ au BufRead,BufNewFile,BufEnter * set formatoptions-=r
 "" Set all /tmp/mutt-* files to mail filetype
 au BufRead,BufNewFile /tmp/mutt-* set tw=72
 au BufRead,BufNewFile /tmp/mutt-* setfiletype mail
+
+"" Viki
+au BufRead,BufNewFile *.viki set ft=viki
 
 "" search settings
 set incsearch  " incrementally finds matches through the haystack
@@ -126,6 +129,18 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 "-- plugins ------------------------------------------------------------
 " These are all installed with Vundle.
+
+"" CamelCaseMotion:  Moving in identifiers that are camelCased or
+" underscore_delimited
+map \w <Plug>CamelCaseMotion_w
+map \b <Plug>CamelCaseMotion_b
+map \e <Plug>CamelCaseMotion_e
+omap \iw <Plug>CamelCaseMotion_iw
+xmap \iw <Plug>CamelCaseMotion_iw
+omap \ib <Plug>CamelCaseMotion_ib
+xmap \ib <Plug>CamelCaseMotion_ib
+omap \ie <Plug>CamelCaseMotion_ie
+xmap \ie <Plug>CamelCaseMotion_ie
 
 "" Gitv: An extension to fugitive that lets you easily view repo history
 let g:Gitv_OpenHorizontal = 1
