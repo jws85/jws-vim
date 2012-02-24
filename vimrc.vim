@@ -66,6 +66,7 @@ map <Leader>s :set list!<cr>
 highlight ExtraWhitespace ctermbg=red guibg=red
 nnoremap <Leader>sn :match ExtraWhitespace /^\s* \s*\<Bar>\s\+$/<CR>
 nnoremap <Leader>sf :match<CR>
+nnoremap <Leader>se /\s\+$<CR>
 
 "" Change syntaxes
 map <Leader>yp :set filetype=php<cr>

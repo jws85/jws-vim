@@ -1,4 +1,4 @@
-" This is an init file for Vundle, which is essentially a package 
+" This is an init file for Vundle, which is essentially a package
 " manager for vim.
 " Yes I know I use way too many plugins.
 
