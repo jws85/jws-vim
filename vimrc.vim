@@ -183,10 +183,30 @@ map <Leader>fh :LustyFilesystemExplorer ~<CR>
 map <Leader>b :LustyBufferExplorer<CR>
 
 "" ConqueTerm: Terminal emulator
+" FIXME consider replacing Conque with the screen plugin...
 map <Leader>rpy :ConqueTermSplit ipython<CR>
 map <Leader>rph :ConqueTermSplit phpsh<CR>
 map <Leader>rr :ConqueTermSplit irb<CR>
 map <Leader>rl :ConqueTermSplit sbcl<CR>
+
+" Replace man page with ConqueTerm man page
+function! ConqueMan()
+    let cmd = &keywordprg . ' '
+    if cmd ==# 'man ' || cmd ==# 'man -s '
+        if v:count > 0
+            let cmd .= v:count . ' '
+        else
+            let cmd = 'man '
+        endif
+    endif
+    let cmd .= expand('<cword>')
+    execute 'ConqueTermSplit' cmd
+endfunction
+map K :<C-U>call ConqueMan()<CR>
+ounmap K
+
+" Close ConqueTerm and clear out the 'file' created
+map <Leader>ct ,k:q<cr>
 
 "" LustyJuggler: Another fast buffer finder with a slightly NSFW name
 map <Leader>bj :LustyJuggler<CR>
