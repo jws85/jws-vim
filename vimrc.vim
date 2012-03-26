@@ -183,7 +183,8 @@ map <Leader>fh :LustyFilesystemExplorer ~<CR>
 map <Leader>b :LustyBufferExplorer<CR>
 
 "" ConqueTerm: Terminal emulator
-" FIXME consider replacing Conque with the screen plugin...
+let g:ConqueTerm_CloseOnEnd = 1
+
 map <Leader>rpy :ConqueTermSplit ipython<CR>
 map <Leader>rph :ConqueTermSplit phpsh<CR>
 map <Leader>rr :ConqueTermSplit irb<CR>
