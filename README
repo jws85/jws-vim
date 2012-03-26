@@ -1,13 +1,12 @@
 This is a giant abomination of a vim configuration, done by someone who
-used emacs for three years.  It's been evolving for about three months
-now...
+used emacs for three years.  It's been evolving for almost a year now.
 
 To install, you need
  * vim (duh)
     - has to be compiled with Python and Ruby support
     - preferably also compiled with GUI support
  * git (so Vundle can pull down what it needs)
- * Exuberant ctags (for EasyTag)
+ * make (Command-T)
 
 To install, first back up your old .vim/ directory as well as .vimrc
 and .gvimrc.  (If you skipped over that sentence, please go back and
@@ -16,9 +15,34 @@ make sure you did all of that!)  Then:
  - cd ~/.vim
  - ./install.sh (This will create a lot of output.  Pray to whatever
    deity you believe in (or don't :P) that it works)
+ - Manually go into bundle/Command-T/ruby/command-t and run the
+   commands
+    ruby extconf.rb
+    make
 
 There is probably some further tweaking that needs to be done and
 documented, but meh.
+
+This is pretty much one giant glop of code, a lot of which I am not
+actively using.  However, here's what I use different things for:
+ - vundle:  Provides package management for this insane pile of junk
+
+ - LustyExplorer:  Fast file finding and buffer switching.
+ - LustyJuggler:  Even faster buffer switching
+ - Command-T:  Even faster file finding
+   The thing is, LustyExplorer is great if you want to type the full
+   path name to whatever it is you're finding.  Command-T excels at
+   giving it a project directory and then you just type part of the
+   filename to find something.  So they complement each other.
+
+ - Conque-Shell:  To run ipython/phpsh (and irb/sbcl) in the same
+   window as vim
+
+ - surround.vim:  Lets you wrap selected text in braces, HTML tags, etc
+ - closetag.vim:  Lets you close HTML/XML tags
+   I simply cannot live without these.
+
+The rest of it is just kind of there.
 
 This configuration Works For Me(tm) and I give no warranty that it will
 do the same for you.

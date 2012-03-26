@@ -35,6 +35,9 @@ set wildmenu
 set wildmode=longest:full,full
 set wildignore+=*.o,*.obj,.git,.svn
 
+"" Python autoindent
+autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class 
+
 "" Turn off auto-insert comment leader.  Really annoying
 au BufRead,BufNewFile,BufEnter * set formatoptions-=r
 
@@ -68,11 +71,31 @@ nnoremap <Leader>sn :match ExtraWhitespace /^\s* \s*\<Bar>\s\+$/<CR>
 nnoremap <Leader>sf :match<CR>
 nnoremap <Leader>se /\s\+$<CR>
 
+"" Extract HTML from an echo(); line in PHP... requires surround.vim
+map <Leader>de ^dt(ds(ds"f;D^j
+
 "" Change syntaxes
 map <Leader>yp :set filetype=php<cr>
 map <Leader>yh :set filetype=html<cr>
 map <Leader>yj :set filetype=javascript<cr>
 map <Leader>yv :set filetype=vim<cr>
+
+"" Do basic HTML escaping/unescaping
+" The same as https://github.com/skwp/vim-html-escape/blob/master/plugin/htmlescape.vim
+function! HtmlEscape()
+  silent s/&/\&amp;/eg
+  silent s/</\&lt;/eg
+  silent s/>/\&gt;/eg
+endfunction
+
+function! HtmlUnEscape()
+  silent s/&lt;/</eg
+  silent s/&gt;/>/eg
+  silent s/&amp;/\&/eg
+endfunction
+
+map <silent> <Leader>he :call HtmlEscape()<CR>
+map <silent> <Leader>hu :call HtmlUnEscape()<CR>
 
 "" It blows my mind that there is no 'join lines without space' key yet
 map <C-j> Jx
@@ -158,6 +181,12 @@ map <Leader>f :LustyFilesystemExplorerFromHere<CR>
 map <Leader>fr :LustyFilesystemExplorer /<CR>
 map <Leader>fh :LustyFilesystemExplorer ~<CR>
 map <Leader>b :LustyBufferExplorer<CR>
+
+"" ConqueTerm: Terminal emulator
+map <Leader>rpy :ConqueTermSplit ipython<CR>
+map <Leader>rph :ConqueTermSplit phpsh<CR>
+map <Leader>rr :ConqueTermSplit irb<CR>
+map <Leader>rl :ConqueTermSplit sbcl<CR>
 
 "" LustyJuggler: Another fast buffer finder with a slightly NSFW name
 map <Leader>bj :LustyJuggler<CR>

@@ -43,6 +43,7 @@ Bundle 'peaksea'
 "" Fast file- and buffer-finding
 Bundle 'LustyExplorer'
 Bundle 'LustyJuggler'
+Bundle 'Command-T'
 
 " BufExplorer
 Bundle 'bufexplorer.zip'
@@ -90,7 +91,8 @@ Bundle 'The-NERD-Commenter'
 
 "-- external commands and other miscellany -----------------------------
 " Terminal in vim.  Just one more step towards turning Vim into Emacs
-Bundle 'Conque-Shell'
+Bundle "https://github.com/rson/vim-conque"
+"Bundle 'Conque-Shell'
 
 " Wiki implemented with vim
 Bundle 'vimwiki'
