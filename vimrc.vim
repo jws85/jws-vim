@@ -36,7 +36,7 @@ set wildmode=longest:full,full
 set wildignore+=*.o,*.obj,.git,.svn
 
 "" Python autoindent
-autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class 
+autocmd BufRead *.py set cindent cinwords=if,elif,else,for,while,try,except,finally,def,class 
 
 "" Turn off auto-insert comment leader.  Really annoying
 au BufRead,BufNewFile,BufEnter * set formatoptions-=r
