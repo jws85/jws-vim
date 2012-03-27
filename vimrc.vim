@@ -53,6 +53,9 @@ set incsearch  " incrementally finds matches through the haystack
 set hlsearch   " highlights all matches
 set smartcase  " search is case sensitive iff a capital letter is in the needle
 
+"" setting timeout to half a second
+set timeoutlen=500
+
 "-- keybindings --------------------------------------------------------
 "" I do NOT miss the chording from emacs and try to avoid it with leader keys,
 "" unless it's an insert-mode mapping (i.e. omnicompletion).
