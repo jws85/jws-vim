@@ -25,6 +25,7 @@ documented, but meh.
 
 This is pretty much one giant glop of code, a lot of which I am not
 actively using.  However, here's what I use different things for:
+
  - vundle:  Provides package management for this insane pile of junk
 
  - LustyExplorer:  Fast file finding and buffer switching.
@@ -41,6 +42,9 @@ actively using.  However, here's what I use different things for:
  - surround.vim:  Lets you wrap selected text in braces, HTML tags, etc
  - closetag.vim:  Lets you close HTML/XML tags
    I simply cannot live without these.
+
+ - neocomplcache:  Function completion (on speed)
+ - snipmate:  Snippets (not used too much)
 
 The rest of it is just kind of there.
 
