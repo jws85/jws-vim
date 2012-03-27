@@ -210,7 +210,7 @@ map K :<C-U>call ConqueMan()<CR>
 ounmap K
 
 " Close ConqueTerm and clear out the 'file' created
-map <Leader>ct ,k:q<cr>
+map <Leader>kt ,k:q<cr>
 
 "" LustyJuggler: Another fast buffer finder with a slightly NSFW name
 map <Leader>bj :LustyJuggler<CR>
@@ -220,7 +220,6 @@ let g:LustyJugglerShowKeys = 'a'
 
 "" Bufkill: Wipe out buffers without rearranging splits
 map <Leader>k :BW!<CR>
-map <Leader>bk :BW!<cr>
 
 "" SnipMate: Snippets manager
 " I don't use it as much so I'd rather have the trigger key away
