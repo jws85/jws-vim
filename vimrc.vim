@@ -56,6 +56,8 @@ set smartcase  " search is case sensitive iff a capital letter is in the needle
 "" setting timeout to half a second
 set timeoutlen=500
 
+set tags=./tags;/
+
 "-- keybindings --------------------------------------------------------
 "" I do NOT miss the chording from emacs and try to avoid it with leader keys,
 "" unless it's an insert-mode mapping (i.e. omnicompletion).
