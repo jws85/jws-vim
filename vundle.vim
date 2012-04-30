@@ -43,7 +43,7 @@ Bundle 'peaksea'
 "" Fast file- and buffer-finding
 Bundle 'LustyExplorer'
 Bundle 'LustyJuggler'
-Bundle 'Command-T'
+Bundle 'ctrlp.vim'
 
 " BufExplorer
 Bundle 'bufexplorer.zip'
