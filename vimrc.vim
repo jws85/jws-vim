@@ -223,10 +223,13 @@ let g:LustyJugglerShowKeys = 'a'
 "" Bufkill: Wipe out buffers without rearranging splits
 map <Leader>k :BW!<CR>
 
-"" SnipMate: Snippets manager
+"" UltiSnips: Snippets manager
 " I don't use it as much so I'd rather have the trigger key away
-" from the SuperTab one
-let g:snips_trigger_key='<C-CR>'
+" from the NeoComplCache one
+let g:UltiSnipsExpandTrigger='<c-cr>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+let g:UltiSnipsListSnippets='<c-\>'
 
 "" CloseTag: Quickly close HTML tags
 " The following line is necessary to get it working in any language.

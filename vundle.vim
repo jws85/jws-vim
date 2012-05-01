@@ -75,16 +75,13 @@ Bundle 'matchit.zip'
 Bundle 'closetag.vim'
 
 " Write HTML faster
-Bundle 'ZenCoding.vim'
+Bundle 'git://github.com/bingaman/vim-sparkup.git'
 
 " A better-ish completion system
 Bundle 'neocomplcache'
 
 " Snippets manager.  Hooks into Tab like YASnippet on emacs.
-Bundle "git://github.com/MarcWeber/vim-addon-mw-utils.git"
-Bundle "git://github.com/tomtom/tlib_vim.git"
-Bundle "git://github.com/honza/snipmate-snippets.git"
-Bundle "git://github.com/garbas/vim-snipmate.git"
+Bundle 'UltiSnips'
 
 " Fast commenting
 Bundle 'The-NERD-Commenter'
