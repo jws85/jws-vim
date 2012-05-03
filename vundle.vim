@@ -77,10 +77,10 @@ Bundle 'closetag.vim'
 " Write HTML faster
 Bundle 'git://github.com/bingaman/vim-sparkup.git'
 
-" A better-ish completion system
-Bundle 'neocomplcache'
+" Tab completion
+Bundle 'SuperTab-continued.'
 
-" Snippets manager.  Hooks into Tab like YASnippet on emacs.
+" Snippets manager
 Bundle 'UltiSnips'
 
 " Fast commenting

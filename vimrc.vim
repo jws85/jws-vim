@@ -137,10 +137,19 @@ map <Leader>tc :tabnew<cr>
 map <Leader>tk :tabclose<cr>
 
 "" Move the working directory to the current one
-map <Leader>cd :cd %:p:h<CR>:pwd<CR>
+map <Leader>wd :cd %:p:h<CR>:pwd<CR>
 
 "" Insert mode:  Delete previous word
 imap <C-BS> <C-W>
+
+" Show syntax highlighting groups for word under cursor
+nmap <c-s> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
 
 "" Quickfind: I hate using ex-commands to move through the list.
 map <Leader>qn :cn<cr>
@@ -158,6 +167,10 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 "-- plugins ------------------------------------------------------------
 " These are all installed with Vundle.
+
+"" CtrlP:  Disable default binding, too slow to index ~
+" I use CtrlP as a project search tool anyways
+nmap <Leader>fp :CtrlP<cr>
 
 "" CamelCaseMotion:  Moving in identifiers that are camelCased or
 " underscore_delimited
@@ -226,10 +239,25 @@ map <Leader>k :BW!<CR>
 "" UltiSnips: Snippets manager
 " I don't use it as much so I'd rather have the trigger key away
 " from the NeoComplCache one
+nmap <c-p> <nop>
+nmap <c-r> <nop>
 let g:UltiSnipsExpandTrigger='<c-cr>'
-let g:UltiSnipsJumpForwardTrigger='<tab>'
-let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+let g:UltiSnipsJumpForwardTrigger='<c-n>'
+let g:UltiSnipsJumpBackwardTrigger='<c-p>'
 let g:UltiSnipsListSnippets='<c-\>'
+let g:UltiSnipsSnippetDirectories=['UltiSnips', 'snippets']
+
+"" SuperTab: Completion. NeoComplCache stopped working for me lately :(
+let g:SuperTabRetainCompletionDuration = 'completion'
+let g:SuperTabLongestHighlight = 0
+let g:SuperTabLongestEnhanced = 0
+au FileType php set omnifunc=phpComplete#CompletePHP
+let g:SuperTabDefaultCompletionType = '<c-p>'
+
+" Want to be able to switch between completions easily
+nmap <Leader>cd :call SuperTabSetCompletionType("\<lt>c-p>")<cr>
+nmap <Leader>co :call SuperTabSetCompletionType("\<lt>c-x>\<lt>c-o>")<cr>
+nmap <Leader>ca :SuperTabHelp<cr>
 
 "" CloseTag: Quickly close HTML tags
 " The following line is necessary to get it working in any language.
@@ -238,37 +266,3 @@ let g:UltiSnipsListSnippets='<c-\>'
 au Filetype php let b:unaryTagsStack="area base br dd dt hr img input link meta param"
 au Filetype xml let b:unaryTagsStack="area base br dd dt hr img input link meta param"
 au Filetype html let b:unaryTagsStack="area base br dd dt hr img input link meta param"
-
-"" NeoComplCache: Completion, after it has popped every hormone and pill possible
-" neocomplcache also has snippets, but iirc they were buggier than SnipMate
-let g:neocomplcache_enable_at_startup = 1
-" Turn neocomplcache autopopup off; I prefer more SuperTab-ish behavior
-let g:neocomplcache_disable_auto_complete = 1
-" Use smartcase
-let g:neocomplcache_enable_smart_case = 1
-" Use CamelCase completion
-let g:neocomplcache_enable_camel_case_completion = 1
-" Use underscore completion
-let g:neocomplcache_enable_underbar_completion = 1
-" Set minimum syntax keyword length
-let g:neocomplcache_min_syntax_length = 2
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-" Enable omnicomp for different langs (warning, php & ruby might slow it down)
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-let g:neocomplcache_omni_patterns = {}
-let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-" OMFG popup on <tab>!!  Arigatou gozaimasu Shougo-san ^_^
-" https://github.com/Shougo/neocomplcache/wiki/neocomplcache-tips%3A
-fu! s:check_back_space()"{{{
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1] =~ '\s'
-endfunction"}}}
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : <SID>check_back_space() ? "\<TAB>" : "\<C-x>\<C-u>\<C-n>"
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ?  "\<TAB>" : "\<C-x>\<C-u>\<C-p>"
-inoremap <expr><CR> pumvisible() ? neocomplcache#smart_close_popup() : "\<CR>"
