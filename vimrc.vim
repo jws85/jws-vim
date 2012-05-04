@@ -248,9 +248,10 @@ let g:UltiSnipsListSnippets='<c-\>'
 let g:UltiSnipsSnippetDirectories=['UltiSnips', 'snippets']
 
 "" SuperTab: Completion. NeoComplCache stopped working for me lately :(
+set completeopt+=longest
 let g:SuperTabRetainCompletionDuration = 'completion'
 let g:SuperTabLongestHighlight = 0
-let g:SuperTabLongestEnhanced = 0
+let g:SuperTabLongestEnhanced = 1
 au FileType php set omnifunc=phpComplete#CompletePHP
 let g:SuperTabDefaultCompletionType = '<c-p>'
 
