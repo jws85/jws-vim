@@ -83,9 +83,6 @@ Bundle 'SuperTab-continued.'
 " Snippets manager
 Bundle 'UltiSnips'
 
-" Fast commenting
-Bundle 'The-NERD-Commenter'
-
 "-- external commands and other miscellany -----------------------------
 " Terminal in vim.  Just one more step towards turning Vim into Emacs
 Bundle "https://github.com/rson/vim-conque"
