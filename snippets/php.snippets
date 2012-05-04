@@ -1,8 +1,20 @@
 extends c, html
 
 snippet fun "PHP function"
-function ${1:functionName} (${2:void})
+function ${1:functionName} (${2})
 {
-	$0
+	${0:// stub}
 }
+endsnippet
+
+snippet phpi "Inline PHP tags"
+<?php $0 ?>
+endsnippet
+
+snippet php "PHP tags"
+<?php
+
+$0
+
+?>
 endsnippet

@@ -242,8 +242,6 @@ map <Leader>k :BW!<CR>
 nmap <c-p> <nop>
 nmap <c-r> <nop>
 let g:UltiSnipsExpandTrigger='<c-cr>'
-let g:UltiSnipsJumpForwardTrigger='<c-n>'
-let g:UltiSnipsJumpBackwardTrigger='<c-p>'
 let g:UltiSnipsListSnippets='<c-\>'
 let g:UltiSnipsSnippetDirectories=['UltiSnips', 'snippets']
 

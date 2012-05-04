@@ -1,0 +1,15 @@
+snippet switch "Switch statement"
+switch (${1:$var}) {
+	$0
+}
+endsnippet
+
+snippet case "Case statement"
+case ${1:0}:
+	${0:// code}
+	break;
+endsnippet
+
+snippet casei "Inline case statement"
+case ${1:0}: ${0: /* code */} break;
+endsnippet
