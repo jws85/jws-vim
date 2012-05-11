@@ -38,6 +38,9 @@ set wildignore+=*.o,*.obj,.git,.svn
 "" Python autoindent
 autocmd BufRead *.py set cindent cinwords=if,elif,else,for,while,try,except,finally,def,class 
 
+"" C++ autoindent
+autocmd Filetype cpp set cinoptions=N-s
+
 "" Turn off auto-insert comment leader.  Really annoying
 au BufRead,BufNewFile,BufEnter * set formatoptions-=r
 

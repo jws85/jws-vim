@@ -68,20 +68,24 @@ Bundle 'camelcasemotion'
 " Increment/decrement dates
 Bundle 'speeddating.vim'
 
-" Extends the % command to work with if/else/endif constructs, HTML tags...
-Bundle 'matchit.zip'
-
-" Mapping to autoclose HTML tags
-Bundle 'closetag.vim'
-
-" Write HTML faster
-Bundle 'git://github.com/bingaman/vim-sparkup.git'
-
 " Tab completion
 Bundle 'SuperTab-continued.'
 
 " Snippets manager
 Bundle 'UltiSnips'
+
+" Extends % command to many other matching groups
+Bundle 'matchit.zip'
+
+"-- webdev lol ---------------------------------------------------------
+" used for sass files (no rails, so no haml)
+Bundle 'git://github.com/tpope/vim-haml.git'
+
+" Mapping to autoclose HTML tags
+Bundle 'closetag.vim'
+
+" Write HTML faster (zencoding, essentially)
+Bundle 'git://github.com/bingaman/vim-sparkup.git'
 
 "-- external commands and other miscellany -----------------------------
 " Terminal in vim.  Just one more step towards turning Vim into Emacs
