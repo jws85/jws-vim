@@ -206,7 +206,7 @@ map <Leader>b :LustyBufferExplorer<CR>
 "" ConqueTerm: Terminal emulator
 let g:ConqueTerm_CloseOnEnd = 1
 
-map <Leader>rpy :ConqueTermSplit ipython<CR>
+map <Leader>rpy :ConqueTermSplit bpython<CR>
 map <Leader>rph :ConqueTermSplit phpsh<CR>
 map <Leader>rr :ConqueTermSplit irb<CR>
 map <Leader>rl :ConqueTermSplit sbcl<CR>
@@ -238,6 +238,9 @@ let g:LustyJugglerShowKeys = 'a'
 
 "" Bufkill: Wipe out buffers without rearranging splits
 map <Leader>k :BW!<CR>
+
+"" NERDTree: For the occasional bout of folder management
+map <Leader>ft :NERDTreeToggle<cr>
 
 "" UltiSnips: Snippets manager
 " I don't use it as much so I'd rather have the trigger key away

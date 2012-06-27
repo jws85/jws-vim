@@ -52,6 +52,8 @@ Bundle 'bufexplorer.zip'
 " :BW! is like good ol' C-x k from emacs.
 Bundle 'bufkill.vim'
 
+Bundle 'The-NERD-tree'
+
 "-- editing extensions --------------------------------------------------
 " Display ANSI escape codes as colors, etc, not as mojibake
 Bundle 'AnsiEsc.vim'
