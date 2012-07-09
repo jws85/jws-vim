@@ -271,3 +271,4 @@ nmap <Leader>ca :SuperTabHelp<cr>
 au Filetype php let b:unaryTagsStack="area base br dd dt hr img input link meta param"
 au Filetype xml let b:unaryTagsStack="area base br dd dt hr img input link meta param"
 au Filetype html let b:unaryTagsStack="area base br dd dt hr img input link meta param"
+au Filetype xhtml let b:unaryTagsStack="area base br dd dt hr img input link meta param"
