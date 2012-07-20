@@ -2,7 +2,9 @@ bundle/*
 !bundle/vundle
 
 plugin/*
+
 syntax/*
+!syntax/python.vim
 
 site/*
 !site/all.vim.sample

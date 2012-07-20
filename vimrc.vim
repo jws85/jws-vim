@@ -171,10 +171,6 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 "-- plugins ------------------------------------------------------------
 " These are all installed with Vundle.
 
-"" CtrlP:  Disable default binding, too slow to index ~
-" I use CtrlP as a project search tool anyways
-nmap <Leader>fp :CtrlP<cr>
-
 "" CamelCaseMotion:  Moving in identifiers that are camelCased or
 " underscore_delimited
 map \w <Plug>CamelCaseMotion_w

@@ -34,6 +34,7 @@ Bundle 'tir_black'
 Bundle 'molokai'
 Bundle 'Symfony'
 Bundle 'peaksea'
+"Bundle 'blackboard.vim'
 
 " I also have some more sitting in my colors/* directory.  I've usually
 " tried to tweak them by hand, but I have the eyes of a programmer, not
@@ -43,16 +44,10 @@ Bundle 'peaksea'
 "" Fast file- and buffer-finding
 Bundle 'LustyExplorer'
 Bundle 'LustyJuggler'
-Bundle 'ctrlp.vim'
-
-" BufExplorer
-Bundle 'bufexplorer.zip'
 
 " Kill/wipe buffer without rearranging windows
 " :BW! is like good ol' C-x k from emacs.
 Bundle 'bufkill.vim'
-
-Bundle 'The-NERD-tree'
 
 "-- editing extensions --------------------------------------------------
 " Display ANSI escape codes as colors, etc, not as mojibake
@@ -93,12 +88,8 @@ Bundle 'git://github.com/bingaman/vim-sparkup.git'
 " Terminal in vim.  Just one more step towards turning Vim into Emacs
 Bundle "https://github.com/rson/vim-conque"
 
-" Wiki implemented with vim
-Bundle 'vimwiki'
-
 " Git integration
 Bundle 'tpope/vim-fugitive'
-Bundle 'gitv'
 
 " Interface with the 'ack' grep replacement.  On Ubuntu you will need to
 " make a symlink from 'ack-grep' to 'ack' in /usr/bin; apparently 'ack' is
